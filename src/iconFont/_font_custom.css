@@ -1,0 +1,732 @@
+.fc-bell-regular:before {
+  content: '\e9a0';
+}
+.fc-bell-solid:before {
+  content: '\e99f';
+}
+.fc-copy-date-2:before {
+  content: '\e99e';
+}
+.fc-copy-date:before {
+  content: '\e99d';
+}
+.fc-bell-cog:before {
+  content: '\e99c';
+}
+.fc-announcements:before {
+  content: '\e99b';
+}
+.fc-sun:before {
+  content: '\e99a';
+}
+.fc-marker:before {
+  content: '\a961';
+}
+.fc-display-range-unused:before {
+  content: '\a96e';
+}
+.fc-series-new:before {
+  content: '\a979';
+}
+.fc-scatterplot-line:before {
+  content: '\e900';
+}
+.fc-annotate:before {
+  content: '\e901';
+}
+.fc-capsule:before {
+  content: '\e902';
+}
+.fc-search-limit:before {
+  content: '\e903';
+}
+.fc-search-logic:before {
+  content: '\e904';
+}
+.fc-search-pattern:before {
+  content: '\e905';
+}
+.fc-search-power:before {
+  content: '\e906';
+}
+.fc-home:before {
+  content: '\e907';
+}
+.fc-capsule-set:before {
+  content: '\e908';
+}
+.fc-scatterplot:before {
+  content: '\e909';
+}
+.fc-series:before {
+  content: '\e90a';
+}
+.fc-group:before {
+  content: '\e90b';
+}
+.fc-boundary-alert:before {
+  content: '\e90c';
+}
+.fc-chart-alert:before {
+  content: '\e90d';
+}
+.fc-seeq-datalab:before {
+  content: '\e90e';
+}
+.fc-seeq-datalab-lock:before {
+  content: '\e90f';
+}
+.fc-all-items:before {
+  content: '\e910';
+}
+.fc-asset-tree:before {
+  content: '\e911';
+}
+.fc-trend:before {
+  content: '\e912';
+}
+.fc-flag:before {
+  content: '\e913';
+}
+.fc-capsules:before {
+  content: '\e914';
+}
+.fc-connect:before {
+  content: '\e915';
+}
+.fc-display-range:before {
+  content: '\e916';
+}
+.fc-statistics:before {
+  content: '\e917';
+}
+.fc-eye:before {
+  content: '\e918';
+}
+.fc-eye-o:before {
+  content: '\e919';
+}
+.fc-data-file:before {
+  content: '\e91a';
+}
+.fc-gridline:before {
+  content: '\e91b';
+}
+.fc-model-and-predict:before {
+  content: '\e91c';
+}
+.fc-cleanse:before {
+  content: '\e91d';
+}
+.fc-identify:before {
+  content: '\e91e';
+}
+.fc-quantify:before {
+  content: '\e91f';
+}
+.fc-treemap:before {
+  content: '\e920';
+}
+.fc-series-dim:before {
+  content: '\e921';
+}
+.fc-series-gen:before {
+  content: '\e922';
+}
+.fc-formula:before {
+  content: '\e923';
+}
+.fc-alignment:before {
+  content: '\e924';
+}
+.fc-delete:before {
+  content: '\e925';
+}
+.fc-list:before {
+  content: '\e926';
+}
+.fc-tile:before {
+  content: '\e927';
+}
+.fc-arrow_down:before {
+  content: '\e928';
+}
+.fc-arrow_up:before {
+  content: '\e929';
+}
+.fc-user-community:before {
+  content: '\e92a';
+}
+.fc-certificate:before {
+  content: '\e92b';
+}
+.fc-training:before {
+  content: '\e92c';
+}
+.fc-knowledge-base:before {
+  content: '\e92d';
+}
+.fc-causality:before {
+  content: '\e92e';
+}
+.fc-parallel-coordinate:before {
+  content: '\e92f';
+}
+.fc-arrow_updown:before {
+  content: '\e930';
+}
+.fc-circle_warning:before {
+  content: '\e931';
+}
+.fc-circle_info:before {
+  content: '\e932';
+}
+.fc-warning:before {
+  content: '\e933';
+}
+.fc-grab-window:before {
+  content: '\e934';
+}
+.fc-magnify:before {
+  content: '\e935';
+}
+.fc-box-empty:before {
+  content: '\e936';
+}
+.fc-box-check:before {
+  content: '\e937';
+}
+.fc-circle-empty:before {
+  content: '\e938';
+}
+.fc-circle-check:before {
+  content: '\e939';
+}
+.fc-q_search:before {
+  content: '\e93a';
+}
+.fc-scatterplot-select:before {
+  content: '\e93b';
+}
+.fc-redo:before {
+  content: '\e93c';
+}
+.fc-digital-filter:before {
+  content: '\e93d';
+}
+.fc-support:before {
+  content: '\e93e';
+}
+.fc-binoculars:before {
+  content: '\e93f';
+}
+.fc-check:before {
+  content: '\e940';
+}
+.fc-filter:before {
+  content: '\e941';
+}
+.fc-trash:before {
+  content: '\e942';
+}
+.fc-gear:before {
+  content: '\e943';
+}
+.fc-lock:before {
+  content: '\e944';
+}
+.fc-lock-open:before {
+  content: '\e945';
+}
+.fc-arrow-dropdown:before {
+  content: '\e946';
+}
+.fc-mag-glass-empty:before {
+  content: '\e947';
+}
+.fc-globe:before {
+  content: '\e948';
+}
+.fc-edit:before {
+  content: '\e949';
+}
+.fc-add-column:before {
+  content: '\e94a';
+}
+.fc-add-row:before {
+  content: '\e94b';
+}
+.fc-border-style:before {
+  content: '\e94c';
+}
+.fc-clock-density:before {
+  content: '\e94d';
+}
+.fc-plus-assets:before {
+  content: '\e94e';
+}
+.fc-plus-selected:before {
+  content: '\e94f';
+}
+.fc-comment:before {
+  content: '\e950';
+}
+.fc-user:before {
+  content: '\e951';
+}
+.fc-engineer:before {
+  content: '\e952';
+}
+.fc-pricing:before {
+  content: '\e953';
+}
+.fc-free-trial:before {
+  content: '\e954';
+}
+.fc-partners:before {
+  content: '\e955';
+}
+.fc-meter:before {
+  content: '\e956';
+}
+.fc-beaker:before {
+  content: '\e957';
+}
+.fc-lightbulb:before {
+  content: '\e958';
+}
+.fc-pdf:before {
+  content: '\e959';
+}
+.fc-add-column-2:before {
+  content: '\e95a';
+}
+.fc-add-row-2:before {
+  content: '\e95b';
+}
+.fc-eraser:before {
+  content: '\e95c';
+}
+.fc-paintbrush:before {
+  content: '\e95d';
+}
+.fc-rows:before {
+  content: '\e95e';
+}
+.fc-quick-start:before {
+  content: '\e95f';
+}
+.fc-video:before {
+  content: '\e960';
+}
+.fc-wireless2:before {
+  content: '\e961';
+}
+.fc-wireless:before {
+  content: '\e962';
+}
+.fc-mag-glass:before {
+  content: '\e963';
+}
+.fc-data:before {
+  content: '\e964';
+}
+.fc-annotation:before {
+  content: '\e965';
+}
+.fc-briefcase:before {
+  content: '\e966';
+}
+.fc-investigate:before {
+  content: '\e967';
+}
+.fc-monitor:before {
+  content: '\e968';
+}
+.fc-clipboard:before {
+  content: '\e969';
+}
+.fc-share-access:before {
+  content: '\e96a';
+}
+.fc-bar-chart-horizontal:before {
+  content: '\e96b';
+}
+.fc-stacked-bar-chart:before {
+  content: '\e96c';
+}
+.fc-stacked-bar-horizontal:before {
+  content: '\e96d';
+}
+.fc-excel:before {
+  content: '\e96e';
+}
+.fc-Asset1:before {
+  content: '\e96f';
+}
+.fc-gears-2:before {
+  content: '\e970';
+}
+.fc-pharma:before {
+  content: '\e971';
+}
+.fc-water:before {
+  content: '\e972';
+}
+.fc-chemical:before {
+  content: '\e973';
+}
+.fc-oil:before {
+  content: '\e974';
+}
+.fc-beverage:before {
+  content: '\e975';
+}
+.fc-utilities:before {
+  content: '\e976';
+}
+.fc-manufacturing:before {
+  content: '\e977';
+}
+.fc-industry:before {
+  content: '\e978';
+}
+.fc-viz-normal:before {
+  content: '\e979';
+}
+.fc-compare:before {
+  content: '\e97a';
+}
+.fc-diamond:before {
+  content: '\e97b';
+}
+.fc-square:before {
+  content: '\e97c';
+}
+.fc-triangle:before {
+  content: '\e97d';
+}
+.fc-rectangle:before {
+  content: '\e97e';
+}
+.fc-strip:before {
+  content: '\e97f';
+}
+.fc-viz-overlay:before {
+  content: '\e980';
+}
+.fc-viz-chain:before {
+  content: '\e981';
+}
+.fc-graph:before {
+  content: '\e982';
+}
+.fc-pin:before {
+  content: '\e983';
+}
+.fc-y-axis:before {
+  content: '\e984';
+}
+.fc-capsule-bar:before {
+  content: '\e985';
+}
+.fc-copy:before {
+  content: '\e986';
+}
+.fc-link:before {
+  content: '\e987';
+}
+.fc-unlink:before {
+  content: '\e988';
+}
+.fc-step-back-full:before {
+  content: '\e989';
+}
+.fc-displays:before {
+  content: '\e98a';
+}
+.fc-overwrite:before {
+  content: '\e98b';
+}
+.fc-rename:before {
+  content: '\e98c';
+}
+.fc-parallel-boundary:before {
+  content: '\e98d';
+}
+.fc-loading-notch:before {
+  content: '\e98e';
+}
+.fc-skill-explorer:before {
+  content: '\e98f';
+}
+.fc-step-fore-full:before {
+  content: '\e990';
+}
+.fc-step-back-half:before {
+  content: '\e991';
+}
+.fc-step-fore-half:before {
+  content: '\e992';
+}
+.fc-arrow-down:before {
+  content: '\e993';
+}
+.fc-arrow-up:before {
+  content: '\e994';
+}
+.fc-expand-close:before {
+  content: '\e995';
+}
+.fc-expand-open:before {
+  content: '\e996';
+}
+.fc-axis:before {
+  content: '\e997';
+}
+.fc-axis-o:before {
+  content: '\e998';
+}
+.fc-solid:before {
+  content: '\e999';
+}
+.fc-short-dash:before {
+  content: '\f901';
+}
+.fc-short-dot:before {
+  content: '\f902';
+}
+.fc-short-dash-dot:before {
+  content: '\f903';
+}
+.fc-short-dash-dot-dot:before {
+  content: '\f904';
+}
+.fc-dot:before {
+  content: '\f905';
+}
+.fc-dash:before {
+  content: '\f906';
+}
+.fc-long-dash:before {
+  content: '\f907';
+}
+.fc-dash-dot:before {
+  content: '\f908';
+}
+.fc-long-dash-dot:before {
+  content: '\f909';
+}
+.fc-long-dash-dot-dot:before {
+  content: '\f910';
+}
+.fc-scalar:before {
+  content: '\f911';
+}
+.fc-detail-columns:before {
+  content: '\f912';
+}
+.fc-workbook:before {
+  content: '\f913';
+}
+.fc-workbook-user:before {
+  content: '\f914';
+}
+.fc-workbook-lock:before {
+  content: '\f915';
+}
+.fc-workbook-globe:before {
+  content: '\f916';
+}
+.fc-arrow-circle:before {
+  content: '\f917';
+}
+.fc-condition-define:before {
+  content: '\f918';
+}
+.fc-condition-combine:before {
+  content: '\f919';
+}
+.fc-series-modify:before {
+  content: '\f920';
+}
+.fc-boundary:before {
+  content: '\f923';
+}
+.fc-condition-digital:before {
+  content: '\f924';
+}
+.fc-timing:before {
+  content: '\f925';
+}
+.fc-series-properties:before {
+  content: '\f926';
+}
+.fc-import:before {
+  content: '\f927';
+}
+.fc-export:before {
+  content: '\f928';
+}
+.fc-pivision:before {
+  content: '\f929';
+}
+.fc-samples-and-line:before {
+  content: '\f930';
+}
+.fc-samples-only:before {
+  content: '\f931';
+}
+.fc-prediction:before {
+  content: '\f932';
+}
+.fc-lowpass:before {
+  content: '\f933';
+}
+.fc-bar-chart:before {
+  content: '\f934';
+}
+.fc-ancillaries:before {
+  content: '\f935';
+}
+.fc-deviation:before {
+  content: '\f936';
+}
+.fc-journal:before {
+  content: '\f937';
+}
+.fc-journal-edit:before {
+  content: '\f938';
+}
+.fc-line-bars:before {
+  content: '\f939';
+}
+.fc-reference:before {
+  content: '\f940';
+}
+.fc-powerpoint:before {
+  content: '\f941';
+}
+.fc-link-seeq:before {
+  content: '\f942';
+}
+.fc-journal-blank:before {
+  content: '\f943';
+}
+.fc-more:before {
+  content: '\f944';
+}
+.fc-share:before {
+  content: '\f945';
+}
+.fc-periodic-condition:before {
+  content: '\f946';
+}
+.fc-report:before {
+  content: '\f947';
+}
+.fc-seeq-content:before {
+  content: '\f948';
+}
+.fc-table:before {
+  content: '\f949';
+}
+.fc-unit:before {
+  content: '\f950';
+}
+.fc-metric:before {
+  content: '\f951';
+}
+.fc-pdf-export:before {
+  content: '\f952';
+}
+.fc-x-circle:before {
+  content: '\f953';
+}
+.fc-stop:before {
+  content: '\f954';
+}
+.fc-report-lock:before {
+  content: '\f955';
+}
+.fc-analysis:before {
+  content: '\f956';
+}
+.fc-analysis-lock:before {
+  content: '\f957';
+}
+.fc-requests:before {
+  content: '\f958';
+}
+.fc-folder:before {
+  content: '\f959';
+}
+.fc-folder-move:before {
+  content: '\f960';
+}
+.fc-folder-new:before {
+  content: '\f961';
+}
+.fc-folder-lock:before {
+  content: '\f962';
+}
+.fc-pin-o:before {
+  content: '\f963';
+}
+.fc-refresh:before {
+  content: '\f964';
+}
+.fc-arrow-right-right:before {
+  content: '\f965';
+}
+.fc-arrow-left-left:before {
+  content: '\f966';
+}
+.fc-refresh-on:before {
+  content: '\f967';
+}
+.fc-refresh-off:before {
+  content: '\f968';
+}
+.fc-box-plus:before {
+  content: '\f969';
+}
+.fc-box-minus:before {
+  content: '\f970';
+}
+.fc-circle_plus:before {
+  content: '\f971';
+}
+.fc-circle_minus:before {
+  content: '\f972';
+}
+.fc-page-break:before {
+  content: '\f973';
+}
+.fc-restore:before {
+  content: '\f974';
+}
+.fc-subscription:before {
+  content: '\f975';
+}
+.fc-jobs:before {
+  content: '\f976';
+}
+.fc-trash_info:before {
+  content: '\f977';
+}
+.fc-trash_info2:before {
+  content: '\f978';
+}
+.fc-bell-curve:before {
+  content: '\f979';
+}
+.fc-facebook:before {
+  content: '\ea90';
+}
+.fc-facebook2:before {
+  content: '\ea91';
+}
+.fc-youtube:before {
+  content: '\ea9d';
+}
