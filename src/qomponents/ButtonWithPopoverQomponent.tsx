@@ -34,11 +34,9 @@ function ButtonWithPopoverQomponent() {
           tooltip="This is a small popover."
           tooltipDelay={0}
           tooltipPlacement="top"
-          placementOffset={2}
           placement="top"
-          shouldTriggerFullWidth
+          extraTriggerClassNames="!w-full"
           isTriggerAsChild
-          extraTriggerClassNames="w-full"
           hasArrow
           isHoverEnabled={currentType === 'hover'}
           align="center"
