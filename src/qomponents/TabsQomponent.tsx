@@ -3,32 +3,32 @@ import { Tabs } from '@seeqdev/qomponents';
 
 const tabsList = [
   {
-    id: 'optionA',
+    id: 'tabA',
     label: 'Tab A',
     content: (
       <div className="p-2 text-base w-full">
-        This is the content for option A. It can be anything you want it to be. It can be text, images, or even a video!
+        This is the content for Tab A. It can be anything you want it to be. It can be text, images, or even a video!
       </div>
     ),
     icon: 'fc-data-file',
   },
   {
-    id: 'optionB',
+    id: 'tabB',
     label: 'Tab B',
     content: (
       <div className="p-2 text-base w-full">
-        This is the content for option B. It can also be anything you want it to be. It can be text, images, or even a
+        This is the content for Tab B. It can also be anything you want it to be. It can be text, images, or even a
         video!
       </div>
     ),
     icon: 'fc-prediction',
   },
   {
-    id: 'optionC',
+    id: 'tabC',
     label: 'Tab C',
     content: (
       <div className="p-2 text-base w-full">
-        This is the content for option C. It can also be anything you want it to be. It can be text, images, or even a
+        This is the content for Tab C. It can also be anything you want it to be. It can be text, images, or even a
         video!
       </div>
     ),
@@ -37,7 +37,7 @@ const tabsList = [
 ];
 
 function TabsQomponent() {
-  const [active, setActive] = React.useState('optionA');
+  const [active, setActive] = React.useState('tabA');
 
   return (
     <div className="flex flex-row border-solid border-gray-300 border p-6 rounded-md w-96">

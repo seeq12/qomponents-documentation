@@ -23,7 +23,7 @@ function AccordionQomponent() {
       trigger: <Trigger label="Option A" isActive={active === 'optionA'} />,
       content: (
         <div className="p-2 text-base">
-          This is the content for option A. It can be anything you want it to be. It can be text, images, or even a
+          This is the content for Option A. It can be anything you want it to be. It can be text, images, or even a
           video!
         </div>
       ),
@@ -35,7 +35,7 @@ function AccordionQomponent() {
       itemTestId: 'optionB',
       content: (
         <div className="p-2 text-base">
-          This is the content for option B. It can also be anything you want it to be. It can be text, images, or even a
+          This is the content for Option B. It can also be anything you want it to be. It can be text, images, or even a
           video!
         </div>
       ),
@@ -47,7 +47,7 @@ function AccordionQomponent() {
       itemTestId: 'optionC',
       content: (
         <div className="p-2 text-base">
-          This is the content for option C. It can also be anything you want it to be. It can be text, images, or even a
+          This is the content for Option C. It can also be anything you want it to be. It can be text, images, or even a
           video!
         </div>
       ),
