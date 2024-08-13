@@ -5,6 +5,12 @@ import TextAreaQomponent from './qomponents/TextAreaQomponent';
 import TooltipQomponent from './qomponents/TooltipQomponent';
 import SelectQomponent from './qomponents/SelectQomponent';
 import IconQomponent from './qomponents/IconQomponent';
+import AccordionQomponent from './qomponents/AccordionQomponent';
+import ModalQomponent from './qomponents/ModalQomponent';
+import ButtonWithDropdownQomponent from './qomponents/ButtonWithDropdownQomponent';
+import ButtonWithPopoverQomponent from './qomponents/ButtonWithPopoverQomponent';
+import ToolbarButtonQomponent from './qomponents/ToolbarButtonQomponent';
+import TabsQomponent from './qomponents/TabsQomponent';
 
 function AvailableQomponents() {
   return (
@@ -18,6 +24,12 @@ function AvailableQomponents() {
           <TextAreaQomponent />
           <TooltipQomponent />
           <IconQomponent />
+          <ButtonWithDropdownQomponent />
+          <ToolbarButtonQomponent />
+          <AccordionQomponent />
+          <ModalQomponent />
+          <ButtonWithPopoverQomponent />
+          <TabsQomponent />
         </div>
       </div>
     </div>
