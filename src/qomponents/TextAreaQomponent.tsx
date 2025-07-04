@@ -1,15 +1,124 @@
-import { TextArea } from '@seeqdev/qomponents/dist';
+import { TextArea } from '@seeqdev/qomponents';
 
-function TextAreaQomponent() {
+const textAreaProps = [
+  {
+    name: 'extraClassNames',
+    type: 'string',
+    required: false,
+    description: 'Additional CSS class names to apply to the TextArea component for custom styling.',
+  },
+  {
+    name: 'id',
+    type: 'string',
+    required: false,
+    description: 'A unique identifier for the TextArea element.',
+  },
+  {
+    name: 'name',
+    type: 'string',
+    required: false,
+    description: 'The name attribute for the TextArea, useful for form submissions.',
+  },
+  {
+    name: 'onChange',
+    type: 'React.ChangeEventHandler<FormControlElement>',
+    required: false,
+    description: 'Callback function called when the value of the TextArea changes.',
+  },
+  {
+    name: 'onKeyUp',
+    type: 'React.KeyboardEventHandler<FormControlElement>',
+    required: false,
+    description: 'Callback function called when a key is released while the TextArea is focused.',
+  },
+  {
+    name: 'onKeyDown',
+    type: 'React.KeyboardEventHandler<FormControlElement>',
+    required: false,
+    description: 'Callback function called when a key is pressed while the TextArea is focused.',
+  },
+  {
+    name: 'onFocus',
+    type: 'React.FocusEventHandler<HTMLTextAreaElement>',
+    required: false,
+    description: 'Callback function called when the TextArea receives focus.',
+  },
+  {
+    name: 'onBlur',
+    type: 'React.FocusEventHandler<FormControlElement>',
+    required: false,
+    description: 'Callback function called when the TextArea loses focus.',
+  },
+  {
+    name: 'placeholder',
+    type: 'string',
+    required: false,
+    description: 'Placeholder text displayed when the TextArea is empty.',
+  },
+  {
+    name: 'readonly',
+    type: 'boolean',
+    required: false,
+    description: 'If true, the TextArea is read-only and cannot be edited by the user.',
+  },
+  {
+    name: 'disabled',
+    type: 'boolean',
+    required: false,
+    description: 'If true, disables the TextArea so it cannot be interacted with.',
+  },
+  {
+    name: 'rows',
+    type: 'number',
+    required: false,
+    description: 'Specifies the visible number of lines in the TextArea.',
+  },
+  {
+    name: 'cols',
+    type: 'number',
+    required: false,
+    description: 'Specifies the visible width of the TextArea.',
+  },
+  {
+    name: 'autoFocus',
+    type: 'boolean',
+    required: false,
+    description: 'If true, the TextArea will automatically receive focus when mounted.',
+  },
+  {
+    name: 'testId',
+    type: 'string',
+    required: false,
+    description: 'A string for the data-testid attribute, useful for selecting the TextArea in tests.',
+  },
+  {
+    name: 'value',
+    type: 'string | string[] | number',
+    required: false,
+    description: 'The current value of the TextArea. Can be a string, array of strings, or a number.',
+  },
+  {
+    name: 'showError',
+    type: 'boolean',
+    required: false,
+    description: 'If true, applies error formatting to the TextArea.',
+  },
+];
+
+const TextAreaQomponent: React.FC = () => {
   return (
-    <div className="flex flex-row border-solid border-gray-300 border p-6 rounded-md w-96">
-      <div className="flex flex-col text-left">
-        <div className="mb-6">
-          <span className="text-lg font-semibold ">TextArea</span>
+    <div className="mt-8 flex flex-col gap-4">
+      {textAreaProps.map((prop) => (
+        <div key={prop.name} className="rounded border border-gray-200 bg-white p-4">
+          <div className="flex flex-wrap items-center gap-2 mb-1">
+            <span className="font-mono font-semibold text-blue-700 text-base">{prop.name}</span>
+            <span className="font-mono text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-700">{prop.type}</span>
+            {prop.required && <span className="text-xs text-red-600 font-semibold ml-2">required</span>}
+          </div>
+          <div className="text-gray-700 text-sm">{prop.description}</div>
         </div>
-        <TextArea placeholder="this is a text area" extraClassNames="w-80" />
-      </div>
+      ))}
     </div>
   );
-}
+};
 export default TextAreaQomponent;

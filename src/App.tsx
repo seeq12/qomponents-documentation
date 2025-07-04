@@ -2,7 +2,8 @@ import './App.css';
 import React from 'react';
 import AvailableIcons from './AvailableIcons';
 import AvailableQomponents from './AvailableQomponents';
-import { Select } from '@seeqdev/qomponents/dist';
+import { Select } from '@seeqdev/qomponents';
+import './index.css';
 
 const themes = [
   { label: 'Analysis', value: 'color_analysis' },

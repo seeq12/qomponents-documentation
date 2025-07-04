@@ -1,69 +1,138 @@
-import React from 'react';
-import { Accordion, Icon } from '@seeqdev/qomponents';
+const accordionProps = [
+  {
+    name: 'value',
+    type: 'string',
+    required: true,
+    description: 'Currently selected/expanded accordion item value',
+  },
+  {
+    name: 'accordionItems',
+    type: 'AccordionItem[]',
+    required: true,
+    description: 'Array of accordion items to render',
+  },
+  {
+    name: 'onItemSelect',
+    type: '(key: string) => void',
+    required: true,
+    description: 'Callback when an accordion item is selected',
+  },
+  {
+    name: 'extraClassNames',
+    type: 'string',
+    required: false,
+    description: 'Additional CSS classes to apply to the accordion container',
+  },
+  {
+    name: 'defaultValue',
+    type: 'string',
+    required: false,
+    description: 'Default item to expand when accordion is uncontrolled',
+  },
+  {
+    name: 'disabled',
+    type: 'boolean',
+    required: false,
+    description: 'Whether the entire accordion is disabled',
+  },
+  {
+    name: 'testId',
+    type: 'string',
+    required: false,
+    description: 'Test ID for the accordion container',
+  },
+];
 
-const Trigger = ({ label, isActive }: { label: string; isActive: boolean }) => (
-  <div className="flex justify-start items-center border-b px-2 py-1 ">
-    <Icon
-      icon={`fc-arrow-dropdown ${isActive ? '-rotate-90' : ''}`}
-      extraClassNames=" mr-[0.5rem] text-[10px]"
-      type="theme"
-    />
-    {label}
-  </div>
-);
+const accordionItemProps = [
+  {
+    name: 'value',
+    type: 'string',
+    required: true,
+    description: 'Unique identifier for the accordion item',
+  },
+  {
+    name: 'trigger',
+    type: 'React.ReactNode',
+    required: true,
+    description: 'Content to display in the clickable trigger/header',
+  },
+  {
+    name: 'content',
+    type: 'React.ReactNode',
+    required: true,
+    description: 'Content to display when the item is expanded',
+  },
+  {
+    name: 'itemTestId',
+    type: 'string',
+    required: false,
+    description: 'Test ID for this specific accordion item',
+  },
+  {
+    name: 'id',
+    type: 'string',
+    required: false,
+    description: 'HTML ID attribute for the accordion item',
+  },
+  {
+    name: 'disabled',
+    type: 'boolean',
+    required: false,
+    description: 'Whether this specific item is disabled',
+  },
+  {
+    name: 'contentClassNames',
+    type: 'string',
+    required: false,
+    description: "Additional CSS classes for the item's content area",
+  },
+];
 
-function AccordionQomponent() {
-  const [active, setActive] = React.useState('');
-
-  const accordionItems = [
-    {
-      value: 'optionA',
-      id: 'optionA',
-      itemTestId: 'optionA',
-      trigger: <Trigger label="Option A" isActive={active === 'optionA'} />,
-      content: (
-        <div className="p-2 text-base">
-          This is the content for Option A. It can be anything you want it to be. It can be text, images, or even a
-          video!
-        </div>
-      ),
-    },
-    {
-      value: 'optionB',
-      id: 'optionB',
-      trigger: <Trigger label="Option B" isActive={active === 'optionB'} />,
-      itemTestId: 'optionB',
-      content: (
-        <div className="p-2 text-base">
-          This is the content for Option B. It can also be anything you want it to be. It can be text, images, or even a
-          video!
-        </div>
-      ),
-    },
-    {
-      value: 'optionC',
-      id: 'optionC',
-      trigger: <Trigger label="Option C" isActive={active === 'optionC'} />,
-      itemTestId: 'optionC',
-      content: (
-        <div className="p-2 text-base">
-          This is the content for Option C. It can also be anything you want it to be. It can be text, images, or even a
-          video!
-        </div>
-      ),
-    },
-  ];
-
+const AccordionQomponent = () => {
   return (
-    <div className="flex flex-row border-solid border-gray-300 border p-6 rounded-md w-96">
-      <div className="flex flex-col text-left w-full">
-        <div className="mb-6">
-          <span className="text-lg font-semibold">Accordion</span>
+    <div className="space-y-6">
+      {/* AccordionItem Type Definition */}
+      <div>
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">AccordionItem Type</h3>
+        <div className="rounded border border-blue-200 bg-blue-50 p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="font-mono font-semibold text-blue-800 text-base">AccordionItem</span>
+            <span className="text-xs text-blue-600">interface</span>
+          </div>
+          <div className="text-blue-700 text-sm mb-3">Individual accordion item configuration</div>
+          <div className="flex flex-col gap-2">
+            {accordionItemProps.map((prop) => (
+              <div key={prop.name} className="bg-white p-3 rounded">
+                <div className="flex flex-wrap items-center gap-2 mb-1">
+                  <span className="font-mono font-semibold text-blue-700 text-sm">{prop.name}</span>
+                  <span className="font-mono text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-700">{prop.type}</span>
+                  {prop.required && <span className="text-xs text-red-600 font-semibold ml-2">required</span>}
+                </div>
+                <div className="text-gray-700 text-xs">{prop.description}</div>
+              </div>
+            ))}
+          </div>
         </div>
-        <Accordion accordionItems={accordionItems} value={active} onItemSelect={(value) => setActive(value)} />
+      </div>
+
+      {/* Accordion Props */}
+      <div>
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">Accordion Props</h3>
+        <div className="flex flex-col gap-4">
+          {accordionProps.map((prop) => (
+            <div key={prop.name} className="rounded border border-gray-200 bg-white p-4">
+              <div className="flex flex-wrap items-center gap-2 mb-1">
+                <span className="font-mono font-semibold text-blue-700 text-base">{prop.name}</span>
+                <span className="font-mono text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-700">{prop.type}</span>
+                {prop.required && <span className="text-xs text-red-600 font-semibold ml-2">required</span>}
+              </div>
+              <div className="text-gray-700 text-sm">{prop.description}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default AccordionQomponent;

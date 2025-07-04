@@ -1,68 +1,63 @@
 import React from 'react';
-import { Icon, Select } from '@seeqdev/qomponents/dist';
+import { Icon, Select } from '@seeqdev/qomponents';
 
 const variants = [
   {
     label: 'theme',
-    value: 'theme',
+    value: 'theme' as const,
   },
   {
     label: 'text',
-    value: 'text',
+    value: 'text' as const,
   },
   {
     label: 'white',
-    value: 'white',
+    value: 'white' as const,
   },
   {
     label: 'dark-gray',
-    value: 'dark-gray',
+    value: 'dark-gray' as const,
   },
   {
     label: 'darkish-gray',
-    value: 'darkish-gray',
+    value: 'darkish-gray' as const,
   },
   {
     label: 'gray',
-    value: 'gray',
+    value: 'gray' as const,
   },
   {
     label: 'success',
-    value: 'success',
+    value: 'success' as const,
   },
   {
     label: 'info',
-    value: 'info',
+    value: 'info' as const,
   },
   {
     label: 'warning',
-    value: 'warning',
+    value: 'warning' as const,
   },
   {
     label: 'danger',
-    value: 'danger',
+    value: 'danger' as const,
   },
 ];
 
-function IconQomponent() {
+const IconQomponent: React.FC = () => {
   const [currentType, setCurrentType] = React.useState(variants[0].value);
 
   return (
-    <div className="flex flex-row border-solid border-gray-300 border p-6 rounded-md w-96">
-      <div className="flex flex-col text-left">
-        <div className="mb-6">
-          <span className="text-lg font-semibold ">Icon</span>
-        </div>
-        <Icon type={currentType as any} icon="fc-circle_info" extraClassNames="w-80 mb-2" />
-        <Select
-          onChange={(value) => setCurrentType(value.value)}
-          options={variants}
-          small={true}
-          extraClassNames="w-32"
-        />
-      </div>
+    <div className="w-96">
+      <Icon type={currentType} icon="fc-circle_info" extraClassNames="w-80 mb-2" />
+      <Select
+        onChange={(value) => setCurrentType(value.value)}
+        options={variants}
+        small={true}
+        extraClassNames="w-32 mt-4"
+      />
     </div>
   );
-}
+};
 
 export default IconQomponent;

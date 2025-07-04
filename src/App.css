@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Place custom styles after Tailwind layers to ensure correct order */
+@layer components {
+  @import "@seeqdev/qomponents/dist/styles.css";
+}
