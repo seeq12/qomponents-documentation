@@ -1,5 +1,3 @@
-import React from 'react';
-
 const collapseProps = [
   { name: 'isVisible', type: 'boolean', required: true, description: 'Indicates if the collapse is visible.' },
   { name: 'children', type: 'React.ReactNode', required: true, description: 'The children of the collapse.' },

@@ -91,7 +91,6 @@ const accordionItemProps = [
 const AccordionQomponent = () => {
   return (
     <div className="space-y-6">
-      {/* AccordionItem Type Definition */}
       <div>
         <h3 className="text-lg font-semibold text-gray-900 mb-4">AccordionItem Type</h3>
         <div className="rounded border border-blue-200 bg-blue-50 p-4">
@@ -115,7 +114,6 @@ const AccordionQomponent = () => {
         </div>
       </div>
 
-      {/* Accordion Props */}
       <div>
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Accordion Props</h3>
         <div className="flex flex-col gap-4">
