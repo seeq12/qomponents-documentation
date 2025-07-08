@@ -1,4 +1,5 @@
 import CodeSnippet from '../helpers/CodeSnippet';
+import SeeqLogo from '../assets/Seeq_logo_darkBlue_sm.png';
 
 const installationCode = `npm install @seeqdev/qomponents
 
@@ -47,12 +48,7 @@ function GettingStartedQomponent() {
     <div className="space-y-8">
       {/* Header with Logo */}
       <div className="text-start">
-        <img
-          width="150"
-          src="https://seeq.com/sites/default/files/seeq-content/seeq-logo-blue-web-33h.svg"
-          alt="Seeq logo"
-          className="mx-auto mb-4"
-        />
+        <img width="150" src={SeeqLogo} alt="Seeq logo" className="mx-auto mb-4" />
         <h1 className="text-3xl font-bold text-gray-900 mb-4">Qomponents</h1>
         <p className="text-lg text-gray-600 mb-6">
           Seeq qomponents are a collection of UI components, including a Button, a TextField, an Icon, as well as a

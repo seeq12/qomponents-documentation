@@ -25,7 +25,7 @@ const Qomponents: React.FC<Props> = ({ sections }) => {
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
-      <aside className="w-64 sticky top-0 h-full p-6 flex flex-col gap-4">
+      <aside className="w-64 sticky top-0 h-full p-6 hidden md:flex flex-col gap-4">
         <div className="text-2xl font-bold mb-2">Qomponents</div>
         <nav className="flex flex-col gap-2 overflow-y-auto h-[83vh]">
           {sections.map((section) => (
