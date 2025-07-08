@@ -46,7 +46,7 @@ function GettingStartedQomponent() {
   return (
     <div className="space-y-8">
       {/* Header with Logo */}
-      <div className="text-center">
+      <div className="text-start">
         <img
           width="150"
           src="https://seeq.com/sites/default/files/seeq-content/seeq-logo-blue-web-33h.svg"
