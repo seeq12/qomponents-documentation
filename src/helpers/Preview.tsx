@@ -46,7 +46,7 @@ const Preview: React.FC<PreviewProps> = ({ embedKey, title = 'CodeSandbox Previe
   return (
     <iframe
       src={`https://codesandbox.io/embed/${embedKey}?view=preview&theme=light&hidenavigation=1&hidedevtools=1&fontsize=12&module=%2Fsrc%2FApp.tsx`}
-      className="w-full h-[400px] rounded-2xl border border-gray-200 overflow-hidden"
+      className="w-[600px] h-[400px] rounded-2xl border border-gray-200 overflow-hidden"
       id="codesandbox-iframe"
       title={title}
     />

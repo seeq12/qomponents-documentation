@@ -7,6 +7,9 @@
  * implementing buttons with attached popover content displays.
  */
 
+import React from 'react';
+import { ComponentPropsDisplay, ComponentSubPropsDisplay } from './components';
+
 const buttonWithPopoverProps = [
   {
     name: 'children',
@@ -174,43 +177,18 @@ const inheritedProps = [
 const ButtonWithPopoverQomponent: React.FC = () => {
   return (
     <div className="space-y-6">
-      {/* Inheritance Notice */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <h3 className="text-lg font-semibold text-blue-800 mb-2">Inheritance</h3>
-        <p className="text-blue-700 text-sm mb-3">
-          ButtonWithPopover extends <span className="font-mono bg-white px-1 rounded">TooltipComponentProps</span>,
-          which means it inherits all tooltip-related properties in addition to its own props.
-        </p>
-        <div className="flex flex-col gap-2">
-          {inheritedProps.map((prop) => (
-            <div key={prop.name} className="bg-white p-2 rounded">
-              <div className="flex flex-wrap items-center gap-2 mb-1">
-                <span className="font-mono font-semibold text-blue-700 text-sm">{prop.name}</span>
-                <span className="font-mono text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-700">{prop.type}</span>
-                <span className="text-xs text-blue-600">inherited</span>
-              </div>
-              <div className="text-blue-700 text-xs">{prop.description}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* ButtonWithPopover Props */}
-      <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">ButtonWithPopover Props</h3>
-        <div className="flex flex-col gap-4">
-          {buttonWithPopoverProps.map((prop) => (
-            <div key={prop.name} className="rounded border border-gray-200 bg-white p-4">
-              <div className="flex flex-wrap items-center gap-2 mb-1">
-                <span className="font-mono font-semibold text-blue-700 text-base">{prop.name}</span>
-                <span className="font-mono text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-700">{prop.type}</span>
-                {prop.required && <span className="text-xs text-red-600 font-semibold ml-2">required</span>}
-              </div>
-              <div className="text-gray-700 text-sm">{prop.description}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <ComponentSubPropsDisplay
+        title="Inheritance"
+        typeName="TooltipComponentProps"
+        typeDescription="ButtonWithPopover extends TooltipComponentProps, which means it inherits all tooltip-related properties in addition to its own props."
+        subProps={inheritedProps.map((prop) => ({
+          name: prop.name,
+          type: prop.type,
+          required: false,
+          description: prop.description,
+        }))}
+      />
+      <ComponentPropsDisplay title="ButtonWithPopover Props" props={buttonWithPopoverProps} />
     </div>
   );
 };

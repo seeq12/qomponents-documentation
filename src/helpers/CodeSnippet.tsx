@@ -57,7 +57,7 @@ interface CodeSnippetProps {
  */
 const CodeSnippet: React.FC<CodeSnippetProps> = ({ code, language = 'tsx' }) => {
   return (
-    <div className="relative">
+    <div className="relative text-xs">
       <pre className="bg-gray-100 border border-gray-300 rounded-lg p-4 overflow-x-auto">
         <code className={`language-${language} text-sm`}>{code}</code>
       </pre>

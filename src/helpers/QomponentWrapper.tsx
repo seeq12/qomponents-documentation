@@ -44,7 +44,7 @@ const QomponentWrapper: React.FC<QomponentWrapperProps> = ({ embedKey, component
       <div className="w-full overflow-auto bg-gray-50 border-gray-100 rounded-2xl p-4 text-sm">
         <h2 className="text-xl font-semibold mt-2">{label}</h2>
         {embedKey ? (
-          <div className="w-full h-130 tw-overflow-hidden mt-4">
+          <div className="flex flex-col items-center justify-center tw-overflow-x-auto mt-4 mb-6">
             <Preview embedKey={embedKey} />
           </div>
         ) : null}

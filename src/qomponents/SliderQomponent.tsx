@@ -7,6 +7,9 @@
  * and interactive behaviors for implementing slider input controls.
  */
 
+import React from 'react';
+import { ComponentPropsDisplay } from './components';
+
 const sliderProps = [
   { name: 'disabled', type: 'boolean', required: false, description: 'Specifies if the slider is disabled.' },
   {
@@ -54,21 +57,6 @@ const sliderProps = [
   { name: 'max', type: 'number', required: false, description: 'The max value of a slider.' },
 ];
 
-const SliderQomponent = () => (
-  <div className="text-left">
-    <div className="mt-8 flex flex-col gap-4">
-      {sliderProps.map((prop) => (
-        <div key={prop.name} className="rounded border border-gray-200 bg-white p-4">
-          <div className="flex flex-wrap items-center gap-2 mb-1">
-            <span className="font-mono font-semibold text-blue-700 text-base">{prop.name}</span>
-            <span className="font-mono text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-700">{prop.type}</span>
-            {prop.required && <span className="text-xs text-red-600 font-semibold ml-2">required</span>}
-          </div>
-          <div className="text-gray-700 text-sm">{prop.description}</div>
-        </div>
-      ))}
-    </div>
-  </div>
-);
+const SliderQomponent: React.FC = () => <ComponentPropsDisplay title="Slider Props" props={sliderProps} />;
 
 export default SliderQomponent;

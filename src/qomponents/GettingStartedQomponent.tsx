@@ -7,6 +7,8 @@
  * steps for developers beginning to work with the Qomponents library.
  */
 
+import React from 'react';
+
 import CodeSnippet from '../helpers/CodeSnippet';
 import SeeqLogo from '../assets/Seeq_logo_darkBlue_sm.png';
 
@@ -134,21 +136,21 @@ function GettingStartedQomponent() {
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b">
+                <tr className="border-b color_topic">
                   <td className="px-4 py-2 text-sm text-gray-900">Topic</td>
-                  <td className="px-4 py-2 text-sm text-blue-600">blue</td>
+                  <td className="px-4 py-2 text-sm tw-bg-sq-color-dark tw-text-white">blue</td>
                   <td className="px-4 py-2 text-sm font-mono text-gray-600">color_topic</td>
                   <td className="px-4 py-2 text-sm font-mono text-gray-600">class="color_topic"</td>
                 </tr>
-                <tr className="border-b">
+                <tr className="border-b color_analysis">
                   <td className="px-4 py-2 text-sm text-gray-900">Analysis</td>
-                  <td className="px-4 py-2 text-sm text-green-600">green</td>
+                  <td className="px-4 py-2 text-sm tw-bg-sq-color-dark tw-text-white">green</td>
                   <td className="px-4 py-2 text-sm font-mono text-gray-600">color_analysis</td>
                   <td className="px-4 py-2 text-sm font-mono text-gray-600">class="color_analysis"</td>
                 </tr>
-                <tr>
+                <tr className="color_datalab">
                   <td className="px-4 py-2 text-sm text-gray-900">DataLab</td>
-                  <td className="px-4 py-2 text-sm text-orange-600">orange</td>
+                  <td className="px-4 py-2 text-sm tw-bg-sq-color-dark tw-text-white">orange</td>
                   <td className="px-4 py-2 text-sm font-mono text-gray-600">color_datalab</td>
                   <td className="px-4 py-2 text-sm font-mono text-gray-600">class="color_datalab"</td>
                 </tr>

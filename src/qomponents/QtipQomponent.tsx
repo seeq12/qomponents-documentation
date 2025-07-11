@@ -8,6 +8,7 @@
  */
 
 import React from 'react';
+import { ComponentPropsDisplay } from './components';
 
 const qtipProps = [
   {
@@ -85,18 +86,7 @@ const QTipQomponent: React.FC = () => {
   return (
     <div>
       {qtipDescription}
-      <div className="mt-8 flex flex-col gap-4">
-        {qtipProps.map((prop) => (
-          <div key={prop.name} className="rounded border border-gray-200 bg-white p-4">
-            <div className="mb-1 flex flex-wrap items-center gap-2">
-              <span className="font-mono font-semibold text-blue-700 text-base">{prop.name}</span>
-              <span className="font-mono rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-700">{prop.type}</span>
-              {prop.required && <span className="ml-2 text-xs font-semibold text-red-600">required</span>}
-            </div>
-            <div className="text-gray-700 text-sm">{prop.description}</div>
-          </div>
-        ))}
-      </div>
+      <ComponentPropsDisplay title="QTip Props" props={qtipProps} />
     </div>
   );
 };
