@@ -1,3 +1,13 @@
+/**
+ * IconQomponent Component
+ *
+ * A documentation component that provides detailed specifications for the Icon
+ * Qomponent. This component documents all available icon properties, types,
+ * color options, styling configurations, and interactive behaviors. It covers
+ * FontAwesome integration, custom icon support, and various visual styling
+ * options available for icon implementation.
+ */
+
 const iconProps = [
   {
     name: 'icon',

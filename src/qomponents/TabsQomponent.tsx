@@ -1,3 +1,12 @@
+/**
+ * TabsQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the Tabs
+ * Qomponent. This component documents tab navigation functionality, including
+ * tab configurations, content panels, styling variants, orientation options,
+ * and accessibility features for implementing tabbed content interfaces.
+ */
+
 const tabsProps = [
   {
     name: 'tabs',
@@ -119,32 +128,31 @@ const TabsQomponent = () => {
           </div>
           <div className="text-blue-700 text-sm mb-3">Individual tab configuration object</div>
           <div className="flex flex-col gap-2">
-            {tabItemProps.map((prop) => (
-              <div key={prop.name} className="bg-white p-3 rounded">
+            {tabItemProps.map(({ name, description, type, required }) => (
+              <div key={name} className="bg-white p-3 rounded">
                 <div className="flex flex-wrap items-center gap-2 mb-1">
-                  <span className="font-mono font-semibold text-blue-700 text-sm">{prop.name}</span>
-                  <span className="font-mono text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-700">{prop.type}</span>
-                  {prop.required && <span className="text-xs text-red-600 font-semibold ml-2">required</span>}
+                  <span className="font-mono font-semibold text-blue-700 text-sm">{name}</span>
+                  <span className="font-mono text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-700">{type}</span>
+                  {required && <span className="text-xs text-red-600 font-semibold ml-2">required</span>}
                 </div>
-                <div className="text-gray-700 text-xs">{prop.description}</div>
+                <div className="text-gray-700 text-xs">{description}</div>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Tabs Props */}
       <div>
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Tabs Props</h3>
         <div className="flex flex-col gap-4">
-          {tabsProps.map((prop) => (
-            <div key={prop.name} className="rounded border border-gray-200 bg-white p-4">
+          {tabsProps.map(({ name, description, type, required }) => (
+            <div key={name} className="rounded border border-gray-200 bg-white p-4">
               <div className="flex flex-wrap items-center gap-2 mb-1">
-                <span className="font-mono font-semibold text-blue-700 text-base">{prop.name}</span>
-                <span className="font-mono text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-700">{prop.type}</span>
-                {prop.required && <span className="text-xs text-red-600 font-semibold ml-2">required</span>}
+                <span className="font-mono font-semibold text-blue-700 text-base">{name}</span>
+                <span className="font-mono text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-700">{type}</span>
+                {required && <span className="text-xs text-red-600 font-semibold ml-2">required</span>}
               </div>
-              <div className="text-gray-700 text-sm">{prop.description}</div>
+              <div className="text-gray-700 text-sm">{description}</div>
             </div>
           ))}
         </div>

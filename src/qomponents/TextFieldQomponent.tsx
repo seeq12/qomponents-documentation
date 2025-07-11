@@ -1,3 +1,12 @@
+/**
+ * TextFieldQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the TextField
+ * Qomponent. This component documents text input functionality, including input
+ * types, validation options, styling variants, placeholder configurations,
+ * and accessibility features for implementing single-line text input controls.
+ */
+
 import { TextField } from '@seeqdev/qomponents';
 
 const textFieldProps = [

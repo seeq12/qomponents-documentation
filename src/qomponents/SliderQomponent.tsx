@@ -1,4 +1,11 @@
-import React from 'react';
+/**
+ * SliderQomponent Component
+ *
+ * A documentation component that provides detailed specifications for the Slider
+ * Qomponent. This component documents slider control functionality, including
+ * range configurations, step values, styling options, orientation settings,
+ * and interactive behaviors for implementing slider input controls.
+ */
 
 const sliderProps = [
   { name: 'disabled', type: 'boolean', required: false, description: 'Specifies if the slider is disabled.' },

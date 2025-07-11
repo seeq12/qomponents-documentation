@@ -21,13 +21,18 @@ import InputGroupQomponent from './qomponents/InputGroupQomponent';
 import ProgressBarQomponent from './qomponents/ProgressBarQomponent';
 import SeeqActionDropdownQomponent from './qomponents/SeeqActionDropdownQomponent';
 import SliderQomponent from './qomponents/SliderQomponent';
-
-const sections: {
+interface SectionProps {
+  /**  A unique identifier for the section. */
   id: string;
+  /** The display label for the section. */
   label: string;
-  component?: React.ReactElement;
+  /**  A React element to render as the section's content. mostly the type definitions */
+  component: React.ReactElement;
+  /** (Optional) A key used for embedding external resources or content. */
   embedKey?: string;
-}[] = [
+}
+
+const sections: SectionProps[] = [
   { id: 'getting-started', label: 'Getting Started', component: <GettingStartedQomponent /> },
   {
     id: 'button-qomponent',

@@ -1,4 +1,12 @@
-import React from 'react';
+/**
+ * AlertQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the Alert
+ * Qomponent. This component displays all available props, inheritance details,
+ * variants, and configuration options for implementing alert notifications and
+ * messaging components within applications. It includes both component-specific
+ * properties and inherited tooltip functionality.
+ */
 
 const alertProps = [
   {
@@ -43,7 +51,7 @@ const inheritedProps = [
   { name: 'tooltipTestId', type: 'string', description: 'Test ID for the tooltip.' },
 ];
 
-const AlertQomponent = () => (
+const AlertQomponent: React.FC = () => (
   <div className="space-y-6">
     <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
       <h3 className="text-lg font-semibold text-blue-800 mb-2">Inheritance</h3>

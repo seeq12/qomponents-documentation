@@ -1,4 +1,11 @@
-import React from 'react';
+/**
+ * ProgressBarQomponent Component
+ *
+ * A documentation component that provides detailed specifications for the ProgressBar
+ * Qomponent. This component documents progress indication functionality, including
+ * value representations, styling variants, animation options, and labeling
+ * configurations for implementing progress indicators and loading states.
+ */
 
 const typeDefinitions = [
   {

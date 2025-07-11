@@ -1,3 +1,12 @@
+/**
+ * ButtonWithDropdownQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the ButtonWithDropdown
+ * Qomponent. This component documents button dropdown functionality, including dropdown
+ * configurations, menu items, positioning options, and interactive behaviors for
+ * implementing button components with attached dropdown menus.
+ */
+
 import React from 'react';
 
 const typeDefinitions = [
@@ -11,26 +20,66 @@ const typeDefinitions = [
         required: false,
         description: "Icon class for dropdown subitems (e.g., 'fc-zoom')",
       },
-      { name: 'label', type: 'string', required: true, description: 'Display label for the subitem' },
+      {
+        name: 'label',
+        type: 'string',
+        required: true,
+        description: 'Display label for the subitem',
+      },
       {
         name: 'onClick',
         type: '(e?: Event) => void',
         required: false,
         description: 'Click handler function for the subitem',
       },
-      { name: 'disabled', type: 'boolean', required: false, description: 'Whether the subitem is disabled' },
-      { name: 'tooltip', type: 'string', required: false, description: 'Tooltip text for the subitem' },
+      {
+        name: 'disabled',
+        type: 'boolean',
+        required: false,
+        description: 'Whether the subitem is disabled',
+      },
+      {
+        name: 'tooltip',
+        type: 'string',
+        required: false,
+        description: 'Tooltip text for the subitem',
+      },
     ],
   },
   {
     name: 'DropdownItems',
     description: 'Interface for main dropdown items, extends TooltipComponentProps for tooltip functionality.',
     properties: [
-      { name: 'id', type: 'string', required: false, description: 'Unique identifier for the dropdown item' },
-      { name: 'icon', type: 'string', required: false, description: "Icon class (e.g., 'fc-zoom')" },
-      { name: 'iconType', type: 'string', required: false, description: "Icon type (e.g., 'theme')" },
-      { name: 'iconColor', type: 'string', required: false, description: 'Icon color' },
-      { name: 'iconCustomId', type: 'string', required: false, description: 'Custom ID for the icon' },
+      {
+        name: 'id',
+        type: 'string',
+        required: false,
+        description: 'Unique identifier for the dropdown item',
+      },
+      {
+        name: 'icon',
+        type: 'string',
+        required: false,
+        description: "Icon class (e.g., 'fc-zoom')",
+      },
+      {
+        name: 'iconType',
+        type: 'string',
+        required: false,
+        description: "Icon type (e.g., 'theme')",
+      },
+      {
+        name: 'iconColor',
+        type: 'string',
+        required: false,
+        description: 'Icon color',
+      },
+      {
+        name: 'iconCustomId',
+        type: 'string',
+        required: false,
+        description: 'Custom ID for the icon',
+      },
       {
         name: 'iconExtraClassNames',
         type: 'string',
@@ -43,28 +92,78 @@ const typeDefinitions = [
         required: true,
         description: 'Label content (string or React element)',
       },
-      { name: 'labelCustomId', type: 'string', required: false, description: 'Custom ID for the label' },
-      { name: 'isLabel', type: 'boolean', required: false, description: 'Whether this item is just a label' },
-      { name: 'onClick', type: '(e?: Event) => void', required: true, description: 'Required click handler' },
-      { name: 'labelClasses', type: 'string', required: false, description: 'CSS classes for the label' },
-      { name: 'disabled', type: 'boolean', required: false, description: 'Whether the item is disabled' },
-      { name: 'itemCustomId', type: 'string', required: false, description: 'Custom ID for the item' },
+      {
+        name: 'labelCustomId',
+        type: 'string',
+        required: false,
+        description: 'Custom ID for the label',
+      },
+      {
+        name: 'isLabel',
+        type: 'boolean',
+        required: false,
+        description: 'Whether this item is just a label',
+      },
+      {
+        name: 'onClick',
+        type: '(e?: Event) => void',
+        required: true,
+        description: 'Required click handler',
+      },
+      {
+        name: 'labelClasses',
+        type: 'string',
+        required: false,
+        description: 'CSS classes for the label',
+      },
+      {
+        name: 'disabled',
+        type: 'boolean',
+        required: false,
+        description: 'Whether the item is disabled',
+      },
+      {
+        name: 'itemCustomId',
+        type: 'string',
+        required: false,
+        description: 'Custom ID for the item',
+      },
       {
         name: 'itemExtraClassNames',
         type: 'string',
         required: false,
         description: 'Additional CSS classes for the item',
       },
-      { name: 'labelTestId', type: 'string', required: false, description: 'Test ID for the label' },
-      { name: 'iconTestId', type: 'string', required: false, description: 'Test ID for the icon' },
+      {
+        name: 'labelTestId',
+        type: 'string',
+        required: false,
+        description: 'Test ID for the label',
+      },
+      {
+        name: 'iconTestId',
+        type: 'string',
+        required: false,
+        description: 'Test ID for the icon',
+      },
       {
         name: 'hasDivider',
         type: 'boolean',
         required: false,
         description: 'Whether to show a divider below this item',
       },
-      { name: 'testId', type: 'string', required: false, description: 'General test ID for the item' },
-      { name: 'subMenuItems', type: 'DropdownSubItem[]', required: false, description: 'Array of sub-menu items' },
+      {
+        name: 'testId',
+        type: 'string',
+        required: false,
+        description: 'General test ID for the item',
+      },
+      {
+        name: 'subMenuItems',
+        type: 'DropdownSubItem[]',
+        required: false,
+        description: 'Array of sub-menu items',
+      },
     ],
   },
   {
@@ -83,37 +182,72 @@ const typeDefinitions = [
         required: true,
         description: 'React element used as the dropdown trigger',
       },
-      { name: 'id', type: 'string', required: false, description: 'Unique identifier for the trigger' },
+      {
+        name: 'id',
+        type: 'string',
+        required: false,
+        description: 'Unique identifier for the trigger',
+      },
       {
         name: 'extraClassNames',
         type: 'string',
         required: false,
         description: 'Additional CSS classes for the trigger',
       },
-      { name: 'containerTestId', type: 'string', required: false, description: 'Test ID for the dropdown container' },
+      {
+        name: 'containerTestId',
+        type: 'string',
+        required: false,
+        description: 'Test ID for the dropdown container',
+      },
       {
         name: 'contentExtraClassNames',
         type: 'string',
         required: false,
         description: 'Additional CSS classes for dropdown content',
       },
-      { name: 'disabled', type: 'boolean', required: false, description: 'Whether the dropdown is disabled' },
+      {
+        name: 'disabled',
+        type: 'boolean',
+        required: false,
+        description: 'Whether the dropdown is disabled',
+      },
       {
         name: 'align',
         type: "'start' | 'center' | 'end'",
         required: false,
         description: 'Horizontal alignment of dropdown content',
       },
-      { name: 'alignOffset', type: 'number', required: false, description: 'Pixel offset from aligned position' },
+      {
+        name: 'alignOffset',
+        type: 'number',
+        required: false,
+        description: 'Pixel offset from aligned position',
+      },
       {
         name: 'placement',
         type: "'top' | 'bottom' | 'left' | 'right'",
         required: false,
         description: 'Where dropdown appears relative to trigger',
       },
-      { name: 'placementOffset', type: 'number', required: false, description: 'Pixel offset from placement position' },
-      { name: 'hasArrow', type: 'boolean', required: false, description: 'Whether to show an arrow pointer' },
-      { name: 'isOpen', type: 'boolean', required: false, description: 'Controlled open state' },
+      {
+        name: 'placementOffset',
+        type: 'number',
+        required: false,
+        description: 'Pixel offset from placement position',
+      },
+      {
+        name: 'hasArrow',
+        type: 'boolean',
+        required: false,
+        description: 'Whether to show an arrow pointer',
+      },
+      {
+        name: 'isOpen',
+        type: 'boolean',
+        required: false,
+        description: 'Controlled open state',
+      },
       {
         name: 'onOpenChange',
         type: '(isOpen: boolean) => void',
@@ -254,16 +388,24 @@ const inheritedProps = [
     type: 'string',
     description: 'Text to display in a tooltip when hovering over the dropdown trigger.',
   },
-  { name: 'tooltipDelay', type: 'number', description: 'Delay in milliseconds before showing the tooltip.' },
+  {
+    name: 'tooltipDelay',
+    type: 'number',
+    description: 'Delay in milliseconds before showing the tooltip.',
+  },
   {
     name: 'tooltipPlacement',
     type: "'top' | 'bottom' | 'left' | 'right'",
     description: 'Placement of the tooltip relative to the trigger.',
   },
-  { name: 'tooltipTestId', type: 'string', description: 'A test id for the tooltip, useful for automated testing.' },
+  {
+    name: 'tooltipTestId',
+    type: 'string',
+    description: 'A test id for the tooltip, useful for automated testing.',
+  },
 ];
 
-const ButtonWithDropdownQomponent = () => (
+const ButtonWithDropdownQomponent: React.FC = () => (
   <div className="space-y-6">
     <div>
       <h3 className="text-lg font-semibold text-gray-900 mb-4">Type Definitions</h3>

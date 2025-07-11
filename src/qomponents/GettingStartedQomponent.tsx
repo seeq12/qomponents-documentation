@@ -1,3 +1,12 @@
+/**
+ * GettingStartedQomponent Component
+ *
+ * A documentation component that provides getting started information and guidance
+ * for using Qomponents. This component serves as an introduction and setup guide,
+ * covering installation instructions, basic usage patterns, and initial configuration
+ * steps for developers beginning to work with the Qomponents library.
+ */
+
 import CodeSnippet from '../helpers/CodeSnippet';
 import SeeqLogo from '../assets/Seeq_logo_darkBlue_sm.png';
 

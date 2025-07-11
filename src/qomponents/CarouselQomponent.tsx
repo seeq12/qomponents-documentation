@@ -1,3 +1,12 @@
+/**
+ * CarouselQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the Carousel
+ * Qomponent. This component documents carousel functionality, including slide navigation,
+ * transition effects, auto-play configurations, indicator controls, and responsive
+ * behaviors for implementing image and content carousels.
+ */
+
 const carouselProps = [
   {
     name: 'testId',
@@ -54,7 +63,7 @@ const carouselProps = [
   },
 ];
 
-const CarouselQomponent = () => (
+const CarouselQomponent: React.FC = () => (
   <div className="text-left">
     <div className="mt-8 flex flex-col gap-4">
       {carouselProps.map((prop) => (

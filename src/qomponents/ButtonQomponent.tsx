@@ -1,3 +1,13 @@
+/**
+ * ButtonQomponent Component
+ *
+ * A comprehensive documentation component that displays Button component specifications,
+ * props, variants, and usage information. This component provides detailed documentation
+ * for the Button Qomponent including all available properties, styling variants,
+ * and behavioral configurations for developers to understand and implement buttons
+ * effectively in their applications.
+ */
+
 import React from 'react';
 
 const buttonProps = [

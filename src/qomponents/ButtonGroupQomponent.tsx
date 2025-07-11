@@ -1,3 +1,13 @@
+/**
+ * ButtonGroupQomponent Component
+ *
+ * A documentation component that provides detailed specifications for the ButtonGroup
+ * Qomponent. This component documents grouped button functionality, including type
+ * definitions for appended buttons, split button configurations, and various
+ * grouping options for creating cohesive button collections with consistent
+ * styling and behavior.
+ */
+
 const typeDefinitions = [
   {
     name: 'AppendedButtonProps',
@@ -62,7 +72,7 @@ const inheritedProps = [
   { name: 'tooltipTestId', type: 'string', description: 'Test ID for the tooltip.' },
 ];
 
-const ButtonGroupQomponent = () => (
+const ButtonGroupQomponent: React.FC = () => (
   <div className="space-y-6">
     <div>
       <h3 className="text-lg font-semibold text-gray-900 mb-4">Type Definitions</h3>

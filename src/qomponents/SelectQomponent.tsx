@@ -1,3 +1,12 @@
+/**
+ * SelectQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the Select
+ * Qomponent. This component documents select dropdown functionality, including
+ * option configurations, multi-select capabilities, search features, styling
+ * variants, and accessibility options for implementing dropdown selection controls.
+ */
+
 const selectProps = [
   {
     name: 'onChange',

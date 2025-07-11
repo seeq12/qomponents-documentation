@@ -1,3 +1,12 @@
+/**
+ * InputGroupQomponent Component
+ *
+ * A documentation component that provides detailed specifications for the InputGroup
+ * Qomponent. This component documents input group functionality, including input
+ * combinations, addon configurations, button attachments, and styling options
+ * for creating grouped form input elements with enhanced functionality.
+ */
+
 const typeDefinitions = [
   {
     name: 'AppendedButtonProps',

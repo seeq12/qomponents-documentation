@@ -1,3 +1,12 @@
+/**
+ * AccordionQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the Accordion
+ * Qomponent. This component details all available properties for creating collapsible
+ * content sections, including value management, styling options, accessibility features,
+ * and interactive behaviors for building expandable/collapsible UI elements.
+ */
+
 const accordionProps = [
   {
     name: 'value',
@@ -88,7 +97,7 @@ const accordionItemProps = [
   },
 ];
 
-const AccordionQomponent = () => {
+const AccordionQomponent: React.FC = () => {
   return (
     <div className="space-y-6">
       <div>

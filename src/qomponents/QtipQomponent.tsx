@@ -1,4 +1,12 @@
-import { QTip, Select } from '@seeqdev/qomponents';
+/**
+ * QtipQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the Qtip
+ * Qomponent. This component documents tooltip functionality, including positioning
+ * options, trigger behaviors, content configurations, styling variants, and
+ * accessibility features for implementing interactive tooltips and help text.
+ */
+
 import React from 'react';
 
 const qtipProps = [

@@ -1,3 +1,12 @@
+/**
+ * ModalQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the Modal
+ * Qomponent. This component documents modal dialog functionality, including sizing
+ * options, backdrop behaviors, header/footer configurations, animation effects,
+ * and accessibility features for implementing modal overlays and dialogs.
+ */
+
 const modalProps = [
   {
     name: 'title',

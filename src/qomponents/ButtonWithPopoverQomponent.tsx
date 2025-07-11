@@ -1,3 +1,12 @@
+/**
+ * ButtonWithPopoverQomponent Component
+ *
+ * A documentation component that provides detailed specifications for the ButtonWithPopover
+ * Qomponent. This component documents button popover functionality, including popover
+ * content configurations, positioning, trigger behaviors, and styling options for
+ * implementing buttons with attached popover content displays.
+ */
+
 const buttonWithPopoverProps = [
   {
     name: 'children',
@@ -162,7 +171,7 @@ const inheritedProps = [
   },
 ];
 
-const ButtonWithPopoverQomponent = () => {
+const ButtonWithPopoverQomponent: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Inheritance Notice */}

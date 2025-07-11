@@ -1,4 +1,11 @@
-import { Checkbox } from '@seeqdev/qomponents';
+/**
+ * CheckboxQomponent Component
+ *
+ * A documentation component that provides detailed specifications for the Checkbox
+ * Qomponent. This component documents checkbox form controls, including checked states,
+ * label configurations, validation options, styling variants, and accessibility
+ * features for implementing checkbox input elements.
+ */
 
 const checkboxProps = [
   {

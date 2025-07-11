@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import QomponentWrapper from '../helpers/QomponentWrapper';
-import IconQomponent from '../qomponents/IconQomponent';
 
 interface Props {
-  sections: { id: string; label: string; component?: React.ReactElement; embedKey?: string }[];
+  sections: { id: string; label: string; component: React.ReactElement; embedKey?: string }[];
 }
 
 const Qomponents: React.FC<Props> = ({ sections }) => {

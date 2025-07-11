@@ -1,11 +1,23 @@
-import React from 'react';
+/**
+ * SeeqActionDropdownQomponent Component
+ *
+ * A documentation component that provides detailed specifications for the SeeqActionDropdown
+ * Qomponent. This component documents action dropdown functionality, including menu
+ * configurations, action items, trigger behaviors, and styling options for
+ * implementing dropdown action menus specific to Seeq applications.
+ */
 
 const typeDefinitions = [
   {
     name: 'SeeqActionDropdownItems',
     description: 'Properties for each dropdown item with display text, actions, and optional styling.',
     properties: [
-      { name: 'id', type: 'string', required: false, description: 'Optional unique identifier for the dropdown item' },
+      {
+        name: 'id',
+        type: 'string',
+        required: false,
+        description: 'Optional unique identifier for the dropdown item',
+      },
       {
         name: 'icon',
         type: 'string',
@@ -18,7 +30,12 @@ const typeDefinitions = [
         required: false,
         description: 'Additional CSS classes for the icon',
       },
-      { name: 'display', type: 'string', required: true, description: 'Label text for the workbench items' },
+      {
+        name: 'display',
+        type: 'string',
+        required: true,
+        description: 'Label text for the workbench items',
+      },
       {
         name: 'action',
         type: '(e?: Event) => void',
