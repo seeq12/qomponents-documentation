@@ -49,7 +49,7 @@ function App() {
               <div className="hidden md:flex items-center space-x-3 tw-dark">
                 <Select
                   extraClassNames="w-28"
-                  onChange={({ value }) => setTheme(value)}
+                  onChange={({ value }: { value: string }) => setTheme(value)}
                   options={themes}
                   placeholder="Theme"
                 />

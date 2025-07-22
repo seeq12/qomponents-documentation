@@ -14,11 +14,11 @@
     "generate-props:component": "npx tsx generate-props.ts"
   },
   "dependencies": {
-    "@seeqdev/qomponents": "^0.0.156",
+    "@seeqdev/qomponents": "0.0.159",
     "@tailwindcss/vite": "4.1.8",
     "lodash": "4.17.21",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "tailwindcss": "4.1.8"
   },
   "devDependencies": {

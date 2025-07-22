@@ -1,4 +1,5 @@
 export { typeDefinitions as accordionTypeDefinitions, accordionProps } from './AccordionProps';
+export { alertProps, inheritedProps as alertInheritedProps } from './AlertProps';
 export { typeDefinitions as buttonTypeDefinitions, buttonProps } from './ButtonProps';
 export { typeDefinitions as buttongroupTypeDefinitions, buttongroupProps, inheritedProps as buttongroupInheritedProps } from './ButtonGroupProps';
 export { typeDefinitions as buttonwithdropdownTypeDefinitions, buttonwithdropdownProps, inheritedProps as buttonwithdropdownInheritedProps } from './ButtonWithDropdownProps';
@@ -7,6 +8,7 @@ export { carouselProps } from './CarouselProps';
 export { checkboxProps, inheritedProps as checkboxInheritedProps } from './CheckboxProps';
 export { collapseProps } from './CollapseProps';
 export { typeDefinitions as iconTypeDefinitions, iconProps, inheritedProps as iconInheritedProps } from './IconProps';
+export { typeDefinitions as inputgroupTypeDefinitions, inputgroupProps, inheritedProps as inputgroupInheritedProps } from './InputGroupProps';
 export { typeDefinitions as modalTypeDefinitions, modalProps } from './ModalProps';
 export { typeDefinitions as progressbarTypeDefinitions, progressbarProps } from './ProgressBarProps';
 export { typeDefinitions as seeqactiondropdownTypeDefinitions, seeqactiondropdownProps, inheritedProps as seeqactiondropdownInheritedProps } from './SeeqActionDropdownProps';

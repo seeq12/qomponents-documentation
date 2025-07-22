@@ -71,6 +71,49 @@ const parseTypeScriptInterface = (filePath: string, interfaceName: string): Pars
       allTypeAliases[name] = definition.trim();
     }
 
+    // Check if we're looking for a type alias instead of an interface
+    if (allTypeAliases[interfaceName]) {
+      // Handle type alias by parsing the referenced interfaces
+      const typeAlias = allTypeAliases[interfaceName];
+
+      // Extract the main interface from the type alias (e.g., "Props & TooltipComponentProps" -> "Props")
+      const baseInterfaceMatch = typeAlias.match(/(\w+)\s*&/);
+      const baseInterface = baseInterfaceMatch ? baseInterfaceMatch[1] : typeAlias;
+
+      if (allInterfaces[baseInterface]) {
+        const result: ParseResult = {
+          mainProps: parseInterfaceBody(allInterfaces[baseInterface]),
+          typeDefinitions: [],
+          inheritedProps: [],
+        };
+
+        // Handle inheritance from the type alias (e.g., "& TooltipComponentProps")
+        if (typeAlias.includes('TooltipComponentProps')) {
+          result.inheritedProps = getTooltipProps();
+        }
+
+        // Find other referenced interfaces in the main interface
+        const mainBody = allInterfaces[baseInterface];
+        const referencedInterfaces = findReferencedInterfaces(mainBody, allInterfaces, content);
+
+        // Parse referenced interfaces as type definitions
+        for (const refName of referencedInterfaces) {
+          if (allInterfaces[refName]) {
+            const props = parseInterfaceBody(allInterfaces[refName]);
+            const description = extractInterfaceDescription(content, refName);
+
+            result.typeDefinitions.push({
+              name: refName,
+              description: description || `Interface for ${refName}`,
+              properties: props,
+            });
+          }
+        }
+
+        return result;
+      }
+    }
+
     if (!allInterfaces[interfaceName]) {
       throw new Error(`Interface ${interfaceName} not found in ${filePath}`);
     }
@@ -98,44 +141,10 @@ const parseTypeScriptInterface = (filePath: string, interfaceName: string): Pars
 
     // Find all interfaces referenced in the main interface
     const mainBody = allInterfaces[interfaceName];
-
-    // Look for array type references (e.g., DropdownItems[], Props[])
-    const arrayTypeReferences = [...mainBody.matchAll(/(\w+)\[\]/g)]
-      .map((match) => match[1])
-      .filter((name) => allInterfaces[name]);
-
-    // Look for direct type references in properties
-    const directTypeReferences = [...mainBody.matchAll(/:\s*(\w+)(?:\s*\||\s*;|\s*$)/g)]
-      .map((match) => match[1])
-      .filter((name) => allInterfaces[name] && name !== interfaceName);
-
-    // Look for union type references (e.g., AppendedButtonProps | ElementProps)
-    const unionTypeReferences = [...mainBody.matchAll(/:\s*\(([^)]+)\)/g)]
-      .flatMap((match) => match[1].split('|').map((type) => type.trim()))
-      .filter((name) => allInterfaces[name]);
-
-    // Look for type aliases that reference interfaces
-    const typeAliasMatches = [...content.matchAll(/type\s+(\w+)\s*=\s*([^;]+);/g)];
-    const typeAliasReferences: string[] = [];
-
-    for (const [, aliasName, aliasDefinition] of typeAliasMatches) {
-      // If this type alias is referenced in the main interface
-      if (mainBody.includes(aliasName)) {
-        // Find interfaces referenced in the type alias definition
-        const referencedInAlias = [...aliasDefinition.matchAll(/(\w+Props|\w+Items|\w+Element)/g)]
-          .map((match) => match[1])
-          .filter((name) => allInterfaces[name]);
-        typeAliasReferences.push(...referencedInAlias);
-      }
-    }
-
-    // Combine all referenced interfaces
-    const allReferencedInterfaces = [
-      ...new Set([...arrayTypeReferences, ...directTypeReferences, ...unionTypeReferences, ...typeAliasReferences]),
-    ];
+    const referencedInterfaces = findReferencedInterfaces(mainBody, allInterfaces, content);
 
     // Parse all referenced interfaces as type definitions
-    for (const refName of allReferencedInterfaces) {
+    for (const refName of referencedInterfaces) {
       if (allInterfaces[refName]) {
         const props = parseInterfaceBody(allInterfaces[refName]);
         const description = extractInterfaceDescription(content, refName);
@@ -153,7 +162,7 @@ const parseTypeScriptInterface = (filePath: string, interfaceName: string): Pars
         const nestedReferences = enhancedProps
           .filter((prop) => prop.type.includes('[]'))
           .map((prop) => prop.type.replace('[]', ''))
-          .filter((typeName) => allInterfaces[typeName] && !allReferencedInterfaces.includes(typeName));
+          .filter((typeName) => allInterfaces[typeName] && !referencedInterfaces.includes(typeName));
 
         // Add nested references
         for (const nestedRef of nestedReferences) {
@@ -220,6 +229,47 @@ const extractInterfaceDescription = (content: string, interfaceName: string): st
   }
 
   return null;
+};
+
+const findReferencedInterfaces = (
+  interfaceBody: string,
+  allInterfaces: Record<string, string>,
+  content: string,
+): string[] => {
+  // Look for array type references (e.g., DropdownItems[], Props[])
+  const arrayTypeReferences = [...interfaceBody.matchAll(/(\w+)\[\]/g)]
+    .map((match) => match[1])
+    .filter((name) => allInterfaces[name]);
+
+  // Look for direct type references in properties
+  const directTypeReferences = [...interfaceBody.matchAll(/:\s*(\w+)(?:\s*\||\s*;|\s*$)/g)]
+    .map((match) => match[1])
+    .filter((name) => allInterfaces[name]);
+
+  // Look for union type references (e.g., AppendedButtonProps | ElementProps)
+  const unionTypeReferences = [...interfaceBody.matchAll(/:\s*\(([^)]+)\)/g)]
+    .flatMap((match) => match[1].split('|').map((type) => type.trim()))
+    .filter((name) => allInterfaces[name]);
+
+  // Look for type aliases that reference interfaces
+  const typeAliasMatches = [...content.matchAll(/type\s+(\w+)\s*=\s*([^;]+);/g)];
+  const typeAliasReferences: string[] = [];
+
+  for (const [, aliasName, aliasDefinition] of typeAliasMatches) {
+    // If this type alias is referenced in the main interface
+    if (interfaceBody.includes(aliasName)) {
+      // Find interfaces referenced in the type alias definition
+      const referencedInAlias = [...aliasDefinition.matchAll(/(\w+Props|\w+Items|\w+Element)/g)]
+        .map((match) => match[1])
+        .filter((name) => allInterfaces[name]);
+      typeAliasReferences.push(...referencedInAlias);
+    }
+  }
+
+  // Combine all referenced interfaces
+  return [
+    ...new Set([...arrayTypeReferences, ...directTypeReferences, ...unionTypeReferences, ...typeAliasReferences]),
+  ];
 };
 
 const getTooltipProps = (): PropDefinition[] => {
@@ -528,7 +578,7 @@ const escapeString = (str: string): string => {
 };
 
 const generateAllQomponents = async (): Promise<void> => {
-  const qomponentsPath = './node_modules/@seeqdev/qomponents/dist';
+  const qomponentsPath = './node_modules/@seeqdev/qomponents/dist/src';
   const outputDir = './src/generated';
 
   // Ensure output directory exists
@@ -552,11 +602,20 @@ const generateAllQomponents = async (): Promise<void> => {
         // Determine the main interface name (usually ComponentNameProps)
         const interfaceName = `${componentName}Props`;
 
-        components.push({
-          name: componentName,
-          typesFile,
-          interfaceName,
-        });
+        // Check if the interface or type alias exists in the file
+        const content = fs.readFileSync(typesFile, 'utf8');
+        const hasInterface =
+          content.includes(`interface ${interfaceName}`) || content.includes(`export interface ${interfaceName}`);
+        const hasTypeAlias =
+          content.includes(`type ${interfaceName}`) || content.includes(`export type ${interfaceName}`);
+
+        if (hasInterface || hasTypeAlias) {
+          components.push({
+            name: componentName,
+            typesFile,
+            interfaceName,
+          });
+        }
       }
     }
   }
