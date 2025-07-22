@@ -24,8 +24,8 @@ function AvailableIcons() {
   React.useEffect(() => {
     searchTerm === ''
       ? setDisplayIcons(availableIcons)
-      : setDisplayIcons(_.filter(displayIcons, (icon: string) => _.includes(icon, searchTerm)));
-  }, [searchTerm]);
+      : setDisplayIcons(_.filter(availableIcons, (icon: string) => _.includes(icon, searchTerm)));
+  }, [searchTerm, availableIcons]);
 
   React.useEffect(() => {
     loadData();

@@ -9,100 +9,44 @@
 
 import React from 'react';
 import { ComponentPropsDisplay, ComponentSubPropsDisplay } from './components';
-
-const tabsProps = [
-  {
-    name: 'tabs',
-    type: 'TabItem[]',
-    required: true,
-    description: 'Array of tabs to be rendered',
-  },
-  {
-    name: 'extraClassNames',
-    type: 'string',
-    required: false,
-    description: 'Adds a class to the tabs container',
-  },
-  {
-    name: 'defaultActiveTab',
-    type: 'string',
-    required: false,
-    description: 'Sets the default active tab to be selected on first load',
-  },
-  {
-    name: 'activeTab',
-    type: 'string',
-    required: false,
-    description: 'Sets the active tab to be selected',
-  },
-  {
-    name: 'transition',
-    type: 'boolean',
-    required: false,
-    description: 'Enable transition animations',
-  },
-  {
-    name: 'onTabSelect',
-    type: '(tabId: string) => void',
-    required: false,
-    description: 'Function to be called when a tab is selected',
-  },
-  {
-    name: 'id',
-    type: 'string',
-    required: false,
-    description: 'Unique identifier for the tabs container',
-  },
-  {
-    name: 'testId',
-    type: 'string',
-    required: false,
-    description: 'Test id for the tabs container',
-  },
-  {
-    name: 'stretchTabs',
-    type: 'boolean',
-    required: false,
-    description: 'If true, the tabs will stretch to fill the width of the container',
-  },
-];
+import { tabsProps } from '../generated/TabsProps';
 
 const tabItemProps = [
   {
     name: 'label',
     type: 'string',
     required: true,
-    description: 'Label of the tab',
+    description: 'The label for the tab item',
   },
   {
     name: 'id',
     type: 'string',
     required: true,
-    description: 'Unique identifier for the tab',
+    description: 'Unique identifier for the tab item',
   },
   {
     name: 'content',
     type: 'React.JSX.Element',
     required: true,
-    description: 'Content to be rendered when the tab is selected',
+    description: 'The content for the tab item',
   },
   {
     name: 'icon',
     type: 'string',
     required: false,
-    description: 'Icon to be rendered next to the label',
+    description: 'Icon to be displayed with the tab label',
   },
   {
     name: 'testId',
     type: 'string',
     required: false,
-    description: 'Test id for the tab',
+    description: 'Test ID for the tab item for testing purposes',
   },
   {
     name: 'tabExtraClassNames',
     type: 'string',
     required: false,
-    description: 'Additional class names to be added to the tab',
+    description: 'Additional class names to be added to the tab item',
   },
   {
     name: 'disabled',

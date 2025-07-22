@@ -40,7 +40,13 @@ const Qomponents: React.FC<Props> = ({ sections }) => {
       {/* Main Content */}
       <main className="flex-1 overflow-y-auto">
         {sections.map(({ id, label, embedKey, component }) => (
-          <div key={id} id={id} ref={(el) => (sectionRefs.current[id] = el)} className="mb-6">
+          <div
+            key={id}
+            id={id}
+            ref={(el) => {
+              sectionRefs.current[id] = el;
+            }}
+            className="mb-6">
             <div className="min-h-[200px]">
               <QomponentWrapper embedKey={embedKey} component={component} label={label} />
             </div>

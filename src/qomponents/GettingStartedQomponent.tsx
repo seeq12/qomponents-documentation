@@ -7,8 +7,6 @@
  * steps for developers beginning to work with the Qomponents library.
  */
 
-import React from 'react';
-
 import CodeSnippet from '../helpers/CodeSnippet';
 import SeeqLogo from '../assets/Seeq_logo_darkBlue_sm.png';
 

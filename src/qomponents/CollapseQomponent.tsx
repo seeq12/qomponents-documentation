@@ -9,21 +9,7 @@
 
 import React from 'react';
 import { ComponentPropsDisplay } from './components';
-
-const collapseProps = [
-  {
-    name: 'isVisible',
-    type: 'boolean',
-    required: true,
-    description: 'Indicates if the collapse is visible.',
-  },
-  {
-    name: 'children',
-    type: 'React.ReactNode',
-    required: true,
-    description: 'The children of the collapse.',
-  },
-];
+import { collapseProps } from '../generated/CollapseProps';
 
 const CollapseQomponent: React.FC = () => <ComponentPropsDisplay title="Collapse Props" props={collapseProps} />;
 
