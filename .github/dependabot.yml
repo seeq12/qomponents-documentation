@@ -5,6 +5,9 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    # Only update specific packages
+    allow:
+      - dependency-name: "@seeqdev/qomponents"
     # Configure commit messages and PR behavior
     commit-message:
       prefix: "deps"
@@ -13,5 +16,3 @@ updates:
     labels:
       - "dependencies"
       - "qomponents-update"
-    reviewers:
-      - "qomponents-seeq"

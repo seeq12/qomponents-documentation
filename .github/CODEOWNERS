@@ -1,0 +1,14 @@
+# Global code owners for all files
+* @qomponents-seeq
+
+# Specific ownership for package files (where Dependabot makes changes)
+package.json @qomponents-seeq
+package-lock.json @qomponents-seeq
+
+# Dependabot configuration files
+.github/dependabot.yml @qomponents-seeq
+.github/workflows/dependabot-*.yml @qomponents-seeq
+
+# Documentation and configuration
+*.md @qomponents-seeq
+README.md @qomponents-seeq
