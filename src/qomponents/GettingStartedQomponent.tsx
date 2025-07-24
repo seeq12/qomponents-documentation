@@ -61,7 +61,7 @@ function GettingStartedQomponent() {
         <h1 className="text-3xl font-bold text-gray-900 mb-4">Qomponents</h1>
         <p className="text-lg text-gray-600 mb-6">
           Seeq qomponents are a collection of UI components, including a Button, a TextField, an Icon, as well as a
-          Tooltip React component (more coming soon!)
+          Tooltip React component and a host of others.
         </p>
         <p className="text-gray-600 mb-6">
           These components are used by Seeq's application and are made publicly available for Developers who want to
