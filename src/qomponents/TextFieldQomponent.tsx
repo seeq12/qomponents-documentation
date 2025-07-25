@@ -9,10 +9,18 @@
 
 import React from 'react';
 import { ComponentPropsDisplay } from './components';
-import { textfieldProps } from '../generated/TextFieldProps';
+import { textfieldProps, inheritedProps } from '../generated/TextFieldProps';
 
 const TextFieldQomponent: React.FC = () => {
-  return <ComponentPropsDisplay title="TextField Props" props={textfieldProps} />;
+  return (
+    <div className="text-left">
+      <ComponentPropsDisplay title="TextField Props" props={textfieldProps} />
+
+      <div className="mt-8">
+        <ComponentPropsDisplay title="Inherited Props" props={inheritedProps} />
+      </div>
+    </div>
+  );
 };
 
 export default TextFieldQomponent;

@@ -81,8 +81,7 @@ function GettingStartedQomponent() {
       <div>
         <h2 className="text-2xl font-semibold text-gray-900 mb-3">Getting started with Seeq qomponents</h2>
         <p className="text-gray-600 mb-4">
-          Prefer a more complete example? Checkout the example folder provided. It includes a ready to run example
-          application. Here is an example of a basic app using the Button component:
+          Prefer a more complete example? Here is an example of a basic app using the Button component:
         </p>
         <CodeSnippet code={basicUsageCode} language="jsx" />
       </div>
