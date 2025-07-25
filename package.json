@@ -14,7 +14,7 @@
     "generate-props:component": "npx tsx generate-props.ts"
   },
   "dependencies": {
-    "@seeqdev/qomponents": "0.0.159",
+    "@seeqdev/qomponents": "0.0.160",
     "@tailwindcss/vite": "4.1.8",
     "lodash": "4.17.21",
     "react": "19.0.0",
