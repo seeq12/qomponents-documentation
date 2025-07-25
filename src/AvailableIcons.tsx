@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { Icon, TextField } from '@seeqdev/qomponents/dist';
+import { Icon, TextField } from '@seeqdev/qomponents';
 import _ from 'lodash';
 import jsonData from './iconFont/_font_custom.css?inline';
 
@@ -24,8 +24,8 @@ function AvailableIcons() {
   React.useEffect(() => {
     searchTerm === ''
       ? setDisplayIcons(availableIcons)
-      : setDisplayIcons(_.filter(displayIcons, (icon: string) => _.includes(icon, searchTerm)));
-  }, [searchTerm]);
+      : setDisplayIcons(_.filter(availableIcons, (icon: string) => _.includes(icon, searchTerm)));
+  }, [searchTerm, availableIcons]);
 
   React.useEffect(() => {
     loadData();
@@ -39,7 +39,7 @@ function AvailableIcons() {
           extraClassNames="w-3/6 m-8"
           placeholder="search for icon"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}
         />
       </div>
       <div className="container my-12 mx-auto px-4 md:px-12">

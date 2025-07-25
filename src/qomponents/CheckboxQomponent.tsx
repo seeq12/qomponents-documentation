@@ -1,16 +1,18 @@
-import { Checkbox } from '@seeqdev/qomponents';
-function CheckboxQomponent() {
-  return (
-    <div className="flex flex-row border-solid border-gray-300 border p-6 rounded-md w-96">
-      <div className="flex flex-col text-left">
-        <div className="mb-6">
-          <span className="text-lg font-semibold ">Checkbox</span>
-        </div>
-        <Checkbox label={'Checkbox'} />
-        <Checkbox type="radio" label={'Radio Button'} />
-      </div>
-    </div>
-  );
-}
+/**
+ * CheckboxQomponent Component
+ *
+ * A documentation component that provides detailed specifications for the Checkbox
+ * Qomponent. This component documents checkbox form controls, including checked states,
+ * label configurations, validation options, styling variants, and accessibility
+ * features for implementing checkbox input elements.
+ */
+
+import React from 'react';
+import { ComponentPropsDisplay } from './components';
+import { checkboxProps } from '../generated/CheckboxProps';
+
+const CheckboxQomponent: React.FC = () => {
+  return <ComponentPropsDisplay title="Checkbox Props" props={checkboxProps} />;
+};
 
 export default CheckboxQomponent;

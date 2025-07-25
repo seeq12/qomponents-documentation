@@ -1,68 +1,57 @@
-import React from 'react';
-import { Icon, Select } from '@seeqdev/qomponents/dist';
+/**
+ * IconQomponent Component
+ *
+ * A documentation component that provides detailed specifications for the Icon
+ * Qomponent. This component documents all available icon properties, types,
+ * color options, styling configurations, and interactive behaviors. It covers
+ * FontAwesome integration, custom icon support, and various visual styling
+ * options available for icon implementation.
+ */
 
-const variants = [
+import React from 'react';
+import { ComponentPropsDisplay, ComponentSubPropsDisplay } from './components';
+import { iconProps, inheritedProps } from '../generated/IconProps';
+
+const typeDefinitions = [
   {
-    label: 'theme',
-    value: 'theme',
-  },
-  {
-    label: 'text',
-    value: 'text',
-  },
-  {
-    label: 'white',
-    value: 'white',
-  },
-  {
-    label: 'dark-gray',
-    value: 'dark-gray',
-  },
-  {
-    label: 'darkish-gray',
-    value: 'darkish-gray',
-  },
-  {
-    label: 'gray',
-    value: 'gray',
-  },
-  {
-    label: 'success',
-    value: 'success',
-  },
-  {
-    label: 'info',
-    value: 'info',
-  },
-  {
-    label: 'warning',
-    value: 'warning',
-  },
-  {
-    label: 'danger',
-    value: 'danger',
+    name: 'IconType',
+    definition:
+      "'theme' | 'white' | 'dark-gray' | 'darkish-gray' | 'gray' | 'color' | 'info' | 'text' | 'warning' | 'inherit' | 'danger' | 'theme-light' | 'success'",
+    description: 'Available color variants for the icon',
   },
 ];
 
-function IconQomponent() {
-  const [currentType, setCurrentType] = React.useState(variants[0].value);
-
+const IconQomponent: React.FC = () => {
   return (
-    <div className="flex flex-row border-solid border-gray-300 border p-6 rounded-md w-96">
-      <div className="flex flex-col text-left">
-        <div className="mb-6">
-          <span className="text-lg font-semibold ">Icon</span>
-        </div>
-        <Icon type={currentType as any} icon="fc-circle_info" extraClassNames="w-80 mb-2" />
-        <Select
-          onChange={(value) => setCurrentType(value.value)}
-          options={variants}
-          small={true}
-          extraClassNames="w-32"
-        />
-      </div>
+    <div className="space-y-6">
+      <ComponentSubPropsDisplay
+        title="Type Definitions"
+        typeName="IconType"
+        typeDescription="Available color variants for the icon"
+        subProps={typeDefinitions.map((type) => ({
+          name: type.name,
+          type: type.definition,
+          required: false,
+          description: type.description,
+        }))}
+        typeLabel="type"
+      />
+
+      <ComponentSubPropsDisplay
+        title="Inheritance"
+        typeName="TooltipComponentProps"
+        typeDescription="Icon extends TooltipComponentProps, which means it inherits all tooltip-related properties in addition to its own props."
+        subProps={inheritedProps.map((prop) => ({
+          name: prop.name,
+          type: prop.type,
+          required: false,
+          description: prop.description,
+        }))}
+      />
+
+      <ComponentPropsDisplay title="Icon Props" props={iconProps} />
     </div>
   );
-}
+};
 
 export default IconQomponent;

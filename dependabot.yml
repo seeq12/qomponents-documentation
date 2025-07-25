@@ -1,0 +1,17 @@
+# dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    # Configure commit messages and PR behavior
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    # Set PR labels for easier identification
+    labels:
+      - "dependencies"
+      - "qomponents-update"
+    reviewers:
+      - "qomponents-seeq"

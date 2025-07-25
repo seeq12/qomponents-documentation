@@ -1,38 +1,61 @@
-import { useState } from 'react';
-import { Button, Modal } from '@seeqdev/qomponents';
+/**
+ * ModalQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the Modal
+ * Qomponent. This component documents modal dialog functionality, including sizing
+ * options, backdrop behaviors, header/footer configurations, animation effects,
+ * and accessibility features for implementing modal overlays and dialogs.
+ */
 
-function ModalQomponent() {
-  const [open, setOpen] = useState(false);
+import React from 'react';
+import { ComponentPropsDisplay, ComponentSubPropsDisplay } from './components';
+import { modalProps } from '../generated/ModalProps';
 
+const typeDefinitions = [
+  {
+    name: 'ModalSize',
+    definition: "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl'",
+    description: 'Size variants for the modal dialog',
+  },
+  {
+    name: 'TitleIconPosition',
+    definition: "'left' | 'right'",
+    description: 'Position of the title icon relative to the title text',
+  },
+  {
+    name: 'ButtonVariant',
+    definition: 'string',
+    description: 'Button style variant (see Button component documentation)',
+  },
+  {
+    name: 'FormControlElement',
+    definition: 'HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement',
+    description: 'HTML form control elements for title editing',
+  },
+];
+
+// Convert type definitions to the format expected by ComponentSubPropsDisplay
+const typeDefinitionsForDisplay = typeDefinitions.map((type) => ({
+  name: type.name,
+  type: type.definition,
+  required: false,
+  description: type.description,
+}));
+
+const ModalQomponent: React.FC = () => {
   return (
-    <div className="flex flex-row border-solid border-gray-300 border p-6 rounded-md w-96">
-      <div className="flex flex-col text-left w-full">
-        <div className="mb-6">
-          <span className="text-lg font-semibold">Modal</span>
-        </div>
-        <Modal
-          open={open}
-          onClose={() => {
-            setOpen(false);
-          }}
-          titleIcon="fc-check"
-          size="lg"
-          title="Modal Title">
-          <div className="p-2 text-base">
-            This is the content for the modal. It can be anything you want it to be. It can be text, images, or even a
-            video!
-          </div>
-        </Modal>
-        <Button
-          onClick={() => {
-            setOpen(true);
-          }}
-          variant="theme"
-          label="Open Modal"
-        />
-      </div>
+    <div className="space-y-6">
+      <ComponentSubPropsDisplay
+        title="Type Definitions"
+        typeName="Modal Types"
+        typeDescription="Type definitions used by the Modal component"
+        subProps={typeDefinitionsForDisplay}
+        typeLabel="type"
+      />
+
+      <ComponentPropsDisplay title="Modal Props" props={modalProps} />
     </div>
   );
-}
+};
 
 export default ModalQomponent;

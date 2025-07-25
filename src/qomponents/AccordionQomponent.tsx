@@ -1,69 +1,32 @@
+/**
+ * AccordionQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the Accordion
+ * Qomponent. This component details all available properties for creating collapsible
+ * content sections, including value management, styling options, accessibility features,
+ * and interactive behaviors for building expandable/collapsible UI elements.
+ */
+
 import React from 'react';
-import { Accordion, Icon } from '@seeqdev/qomponents';
+import { ComponentPropsDisplay, ComponentSubPropsDisplay } from './components';
+import { typeDefinitions, accordionProps } from '../generated/AccordionProps';
 
-const Trigger = ({ label, isActive }: { label: string; isActive: boolean }) => (
-  <div className="flex justify-start items-center border-b px-2 py-1 ">
-    <Icon
-      icon={`fc-arrow-dropdown ${isActive ? '-rotate-90' : ''}`}
-      extraClassNames=" mr-[0.5rem] text-[10px]"
-      type="theme"
-    />
-    {label}
-  </div>
-);
-
-function AccordionQomponent() {
-  const [active, setActive] = React.useState('');
-
-  const accordionItems = [
-    {
-      value: 'optionA',
-      id: 'optionA',
-      itemTestId: 'optionA',
-      trigger: <Trigger label="Option A" isActive={active === 'optionA'} />,
-      content: (
-        <div className="p-2 text-base">
-          This is the content for Option A. It can be anything you want it to be. It can be text, images, or even a
-          video!
-        </div>
-      ),
-    },
-    {
-      value: 'optionB',
-      id: 'optionB',
-      trigger: <Trigger label="Option B" isActive={active === 'optionB'} />,
-      itemTestId: 'optionB',
-      content: (
-        <div className="p-2 text-base">
-          This is the content for Option B. It can also be anything you want it to be. It can be text, images, or even a
-          video!
-        </div>
-      ),
-    },
-    {
-      value: 'optionC',
-      id: 'optionC',
-      trigger: <Trigger label="Option C" isActive={active === 'optionC'} />,
-      itemTestId: 'optionC',
-      content: (
-        <div className="p-2 text-base">
-          This is the content for Option C. It can also be anything you want it to be. It can be text, images, or even a
-          video!
-        </div>
-      ),
-    },
-  ];
-
+const AccordionQomponent: React.FC = () => {
   return (
-    <div className="flex flex-row border-solid border-gray-300 border p-6 rounded-md w-96">
-      <div className="flex flex-col text-left w-full">
-        <div className="mb-6">
-          <span className="text-lg font-semibold">Accordion</span>
-        </div>
-        <Accordion accordionItems={accordionItems} value={active} onItemSelect={(value) => setActive(value)} />
-      </div>
+    <div className="space-y-2">
+      {Object.entries(typeDefinitions).map(([typeName, typeData]) => (
+        <ComponentSubPropsDisplay
+          key={typeName}
+          title={`${typeName} Type`}
+          typeName={typeName}
+          typeDescription={typeData.description}
+          subProps={typeData.properties}
+        />
+      ))}
+
+      <ComponentPropsDisplay title="Accordion Props" props={accordionProps} />
     </div>
   );
-}
+};
 
 export default AccordionQomponent;

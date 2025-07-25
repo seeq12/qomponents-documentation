@@ -1,54 +1,80 @@
-import React from 'react';
-import { Tabs } from '@seeqdev/qomponents';
+/**
+ * TabsQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the Tabs
+ * Qomponent. This component documents tab navigation functionality, including
+ * tab configurations, content panels, styling variants, orientation options,
+ * and accessibility features for implementing tabbed content interfaces.
+ */
 
-const tabsList = [
+import React from 'react';
+import { ComponentPropsDisplay, ComponentSubPropsDisplay } from './components';
+import { tabsProps } from '../generated/TabsProps';
+
+const tabItemProps = [
   {
-    id: 'tabA',
-    label: 'Tab A',
-    content: (
-      <div className="p-2 text-base w-full">
-        This is the content for Tab A. It can be anything you want it to be. It can be text, images, or even a video!
-      </div>
-    ),
-    icon: 'fc-data-file',
+    name: 'label',
+    type: 'string',
+    required: true,
+    description: 'The label for the tab item',
   },
   {
-    id: 'tabB',
-    label: 'Tab B',
-    content: (
-      <div className="p-2 text-base w-full">
-        This is the content for Tab B. It can also be anything you want it to be. It can be text, images, or even a
-        video!
-      </div>
-    ),
-    icon: 'fc-prediction',
+    name: 'id',
+    type: 'string',
+    required: true,
+    description: 'Unique identifier for the tab item',
   },
   {
-    id: 'tabC',
-    label: 'Tab C',
-    content: (
-      <div className="p-2 text-base w-full">
-        This is the content for Tab C. It can also be anything you want it to be. It can be text, images, or even a
-        video!
-      </div>
-    ),
-    icon: 'fc-gears-2',
+    name: 'content',
+    type: 'React.JSX.Element',
+    required: true,
+    description: 'The content for the tab item',
+  },
+  {
+    name: 'icon',
+    type: 'string',
+    required: false,
+    description: 'Icon to be displayed with the tab label',
+  },
+  {
+    name: 'testId',
+    type: 'string',
+    required: false,
+    description: 'Test ID for the tab item for testing purposes',
+  },
+  {
+    name: 'tabExtraClassNames',
+    type: 'string',
+    required: false,
+    description: 'Additional class names to be added to the tab item',
+  },
+  {
+    name: 'disabled',
+    type: 'boolean',
+    required: false,
+    description: 'Whether the tab is disabled',
+  },
+  {
+    name: 'tabContentExtraClassNames',
+    type: 'string',
+    required: false,
+    description: 'Additional class names to be added to the tab content',
   },
 ];
 
-function TabsQomponent() {
-  const [active, setActive] = React.useState('tabA');
-
+const TabsQomponent: React.FC = () => {
   return (
-    <div className="flex flex-row border-solid border-gray-300 border p-6 rounded-md w-96">
-      <div className="flex flex-col text-left w-full">
-        <div className="mb-6">
-          <span className="text-lg font-semibold">Tabs</span>
-        </div>
-        <Tabs stretchTabs={true} activeTab={active} onTabSelect={setActive} defaultActiveTab="data" tabs={tabsList} />
-      </div>
+    <div className="space-y-6">
+      <ComponentSubPropsDisplay
+        title="TabItem Type"
+        typeName="TabItem"
+        typeDescription="Individual tab configuration object"
+        subProps={tabItemProps}
+      />
+
+      <ComponentPropsDisplay title="Tabs Props" props={tabsProps} />
     </div>
   );
-}
+};
 
 export default TabsQomponent;

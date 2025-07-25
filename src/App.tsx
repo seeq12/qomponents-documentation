@@ -2,7 +2,8 @@ import './App.css';
 import React from 'react';
 import AvailableIcons from './AvailableIcons';
 import AvailableQomponents from './AvailableQomponents';
-import { Select } from '@seeqdev/qomponents/dist';
+import { Select } from '@seeqdev/qomponents';
+import './index.css';
 
 const themes = [
   { label: 'Analysis', value: 'color_analysis' },
@@ -48,7 +49,7 @@ function App() {
               <div className="hidden md:flex items-center space-x-3 tw-dark">
                 <Select
                   extraClassNames="w-28"
-                  onChange={({ value }) => setTheme(value)}
+                  onChange={({ value }: { value: string }) => setTheme(value)}
                   options={themes}
                   placeholder="Theme"
                 />

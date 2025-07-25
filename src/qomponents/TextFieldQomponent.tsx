@@ -1,14 +1,26 @@
-import { TextField } from '@seeqdev/qomponents';
-function TextFieldQomponent() {
+/**
+ * TextFieldQomponent Component
+ *
+ * A documentation component that provides comprehensive information about the TextField
+ * Qomponent. This component documents text input functionality, including input
+ * types, validation options, styling variants, placeholder configurations,
+ * and accessibility features for implementing single-line text input controls.
+ */
+
+import React from 'react';
+import { ComponentPropsDisplay } from './components';
+import { textfieldProps, inheritedProps } from '../generated/TextFieldProps';
+
+const TextFieldQomponent: React.FC = () => {
   return (
-    <div className="flex flex-row border-solid border-gray-300 border p-6 rounded-md w-96">
-      <div className="flex flex-col text-left">
-        <div className="mb-6">
-          <span className="text-lg font-semibold ">TextField</span>
-        </div>
-        <TextField placeholder="this is a textfield" extraClassNames="w-80" />
+    <div className="text-left">
+      <ComponentPropsDisplay title="TextField Props" props={textfieldProps} />
+
+      <div className="mt-8">
+        <ComponentPropsDisplay title="Inherited Props" props={inheritedProps} />
       </div>
     </div>
   );
-}
+};
+
 export default TextFieldQomponent;
