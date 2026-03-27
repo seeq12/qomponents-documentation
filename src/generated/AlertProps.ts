@@ -33,7 +33,7 @@ const alertProps: PropDefinition[] = [
   },
   {
     name: 'variant',
-    type: '\'danger\' | \'theme\' | \'warning\' | \'gray\'',
+    type: '\'danger\' | \'theme\' | \'warning\' | \'gray\' | \'formulaError\'',
     required: true,
     description: ' The visual style variant of the alert, which determines its appearance and color scheme: - `danger`: Red styling for error messages or critical warnings - `warning`: Yellow/orange styling for caution messages - `gray`: Neutral gray styling for general information - `theme`: Uses the current theme colors for contextual information ',
   },

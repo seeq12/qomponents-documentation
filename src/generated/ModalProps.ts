@@ -72,15 +72,15 @@ const modalProps: PropDefinition[] = [
   },
   {
     name: 'children',
-    type: 'React.ReactElement',
+    type: 'React.ReactNode',
     required: true,
-    description: ' Main content of the modal body. This is where you place the primary content, forms, information, or interactive elements. Must be a single React element (wrap multiple elements in a container if needed). ',
+    description: ' Main content of the modal body. This is where you place the primary content, forms, information, or interactive elements. Accepts any renderable React content: elements, strings, numbers, arrays, fragments, etc. ',
   },
   {
     name: 'modalFooter',
-    type: 'React.ReactElement',
+    type: 'React.ReactNode',
     required: false,
-    description: ' Custom footer content that completely replaces the default button footer. When provided, all default buttons (submit, cancel, custom) are hidden. Use this when you need complete control over the footer layout and actions. ',
+    description: ' Custom footer content that completely replaces the default button footer. When provided, all default buttons (submit, cancel, custom) are hidden. Use this when you need complete control over the footer layout and actions. Accepts any renderable React content: elements, strings, numbers, arrays, fragments, etc. ',
   },
   {
     name: 'open',
@@ -267,6 +267,12 @@ const modalProps: PropDefinition[] = [
     type: 'ButtonVariant',
     required: false,
     description: ' Visual style variant for the submit button. Determines the button\'s appearance and color scheme. Use \'theme\' for primary actions, \'danger\' for destructive actions, or other variants as appropriate. ',
+  },
+  {
+    name: 'ariaDescribedBy',
+    type: 'string',
+    required: false,
+    description: ' ARIA attribute that references the ID of an element containing descriptive text for the modal. This prop is passed to the modal dialog element as `aria-describedby` for accessibility purposes. ',
   },
   {
     name: 'onPointerDownOutside',

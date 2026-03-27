@@ -2,7 +2,6 @@ export { typeDefinitions as accordionTypeDefinitions, accordionProps } from './A
 export { alertProps, inheritedProps as alertInheritedProps } from './AlertProps';
 export { typeDefinitions as buttonTypeDefinitions, buttonProps } from './ButtonProps';
 export { typeDefinitions as buttongroupTypeDefinitions, buttongroupProps, inheritedProps as buttongroupInheritedProps } from './ButtonGroupProps';
-export { typeDefinitions as buttonwithdropdownTypeDefinitions, buttonwithdropdownProps, inheritedProps as buttonwithdropdownInheritedProps } from './ButtonWithDropdownProps';
 export { buttonwithpopoverProps, inheritedProps as buttonwithpopoverInheritedProps } from './ButtonWithPopoverProps';
 export { carouselProps } from './CarouselProps';
 export { checkboxProps, inheritedProps as checkboxInheritedProps } from './CheckboxProps';
@@ -20,3 +19,4 @@ export { textareaProps } from './TextAreaProps';
 export { textfieldProps, inheritedProps as textfieldInheritedProps } from './TextFieldProps';
 export { toolbarbuttonProps } from './ToolbarButtonProps';
 export { typeDefinitions as tooltipTypeDefinitions, tooltipProps } from './TooltipProps';
+export { triggerwithdropdownProps, inheritedProps as triggerwithdropdownInheritedProps } from './TriggerWithDropdownProps';

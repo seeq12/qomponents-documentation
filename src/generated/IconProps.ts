@@ -24,6 +24,18 @@ const typeDefinitions: { [key: string]: TypeDefinition } = {
         description: 'Type definition: (typeof iconTypes)[number]',
       }
     ],
+  },
+  IconSize: {
+    name: 'IconSize',
+    description: 'Type alias for IconSize',
+    properties: [
+      {
+        name: 'IconSize',
+        type: '\'2xs\' | \'xs\' | \'sm\' | \'lg\' | \'xl\' | \'2xl\' | \'1x\' | \'2x\' | \'3x\' | \'4x\' | \'5x\' | \'6x\' | \'7x\' | \'8x\' | \'9x\' | \'10x\'',
+        required: false,
+        description: 'Type definition: \'2xs\' | \'xs\' | \'sm\' | \'lg\' | \'xl\' | \'2xl\' | \'1x\' | \'2x\' | \'3x\' | \'4x\' | \'5x\' | \'6x\' | \'7x\' | \'8x\' | \'9x\' | \'10x\'',
+      }
+    ],
   }
 };
 
@@ -45,6 +57,12 @@ const iconProps: PropDefinition[] = [
     type: 'IconType',
     required: false,
     description: ' Visual style type that determines the icon\'s color and appearance: - `theme`: Uses primary theme colors (default) - `white`: Pure white color - `text`: Uses standard text color - `dark-gray`: Dark gray color - `darkish-gray`: Medium-dark gray color - `gray`: Standard gray color - `color`: Uses custom color specified in `color` prop - `info`: Blue informational color - `warning`: Yellow/orange warning color - `danger`: Red error/danger color - `success`: Green success color - `theme-light`: Lighter version of theme color - `inherit`: Inherits color from parent element @default \'theme\' ',
+  },
+  {
+    name: 'size',
+    type: 'IconSize',
+    required: false,
+    description: ' Icon size, mapped to FontAwesome sizing classes so it works for both FA and FontCustom icons. Examples: \'sm\', \'lg\', \'xl\', \'2xl\', \'1x\'...\'10x\', \'xs\', \'2xs\'. ',
   },
   {
     name: 'color',
@@ -74,13 +92,13 @@ const iconProps: PropDefinition[] = [
     name: 'large',
     type: 'boolean',
     required: false,
-    description: ' When true, applies the \'fa-lg\' class to make the icon larger than normal size. Cannot be used together with the `small` prop. Useful for emphasis or better visibility. ',
+    description: ' @deprecated Use `size="lg"` instead. ',
   },
   {
     name: 'small',
     type: 'boolean',
     required: false,
-    description: ' When true, applies the \'fa-sm\' class to make the icon smaller than normal size. Cannot be used together with the `large` prop. Useful for compact layouts or inline text. ',
+    description: ' @deprecated Use `size="sm"` instead. ',
   },
   {
     name: 'testId',

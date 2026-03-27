@@ -36,6 +36,12 @@ const typeDefinitions: { [key: string]: TypeDefinition } = {
         description: ' Additional CSS classes to apply to the icon element. Use this to customize icon appearance beyond standard styling. ',
       },
       {
+        name: 'iconContainerExtraClassNames',
+        type: 'string',
+        required: false,
+        description: ' Additional CSS classes to apply to the dropdown icon container. Use this to customize the icon\'s appearance beyond default Seeq styling. ',
+      },
+      {
         name: 'display',
         type: 'string',
         required: true,

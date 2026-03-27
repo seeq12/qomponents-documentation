@@ -57,7 +57,7 @@ const tabsProps: PropDefinition[] = [
   },
   {
     name: 'tabs',
-    type: '{ label: string; id: string; content: React.JSX.Element; icon?: string; testId?: string; tabExtraClassNames?: string; disabled?: boolean; tabContentExtraClassNames?: string; }[]',
+    type: '{ label: string; id: string; content: React.JSX.Element; icon?: string; testId?: string; tabExtraClassNames?: string; disabled?: boolean; tabContentExtraClassNames?: string; tabLabelExtraClassNames?: string; }[]',
     required: true,
     description: ' Array of tab configurations that define the available tabs and their content. Each tab represents a separate page or section within the tabbed interface. ',
   },

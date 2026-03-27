@@ -26,6 +26,12 @@ const textfieldProps: PropDefinition[] = [
     description: ' Callback function triggered when the text field value changes. Receives the change event containing the new value. Use this to update your component state in controlled input scenarios. ',
   },
   {
+    name: 'onPaste',
+    type: 'React.ClipboardEventHandler<FormControlElement>',
+    required: false,
+    description: ' Callback function triggered when the user pastes content into the text field. Receives the clipboard event with details about the pasted content. Useful for implementing custom paste handling, such as sanitizing input or preventing certain types of content from being pasted. ',
+  },
+  {
     name: 'onKeyUp',
     type: 'React.KeyboardEventHandler<FormControlElement>',
     required: false,

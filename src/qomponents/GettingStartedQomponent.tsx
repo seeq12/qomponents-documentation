@@ -22,7 +22,7 @@ function App() {
   return <Button variant="theme" label="Seeq Rocks" />;
 }`;
 
-const importStylesCode = `@import '@seeqdev/qomponents/dist/styles.css';`;
+const importStylesCode = `@import '@seeqdev/qomponents/styles.css';`;
 
 const themeCode = `<!-- Apply theme to your application wrapper -->
 <div class="color_analysis">
@@ -49,7 +49,7 @@ const webpackCode = `// Add to your webpack.config rules array:
 }
 
 // For webpack + scss imports:
-@import '~@seeqdev/qomponents/dist/styles.css';
+@import '~@seeqdev/qomponents/styles.css';
 @import '~@fortawesome/fontawesome-free/css/all.css';`;
 
 function GettingStartedQomponent() {

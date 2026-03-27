@@ -56,6 +56,12 @@ const textareaProps: PropDefinition[] = [
     description: ' Callback function triggered when the textarea loses focus. Commonly used for form validation, saving draft data, or updating UI state when users finish interacting with the field. ',
   },
   {
+    name: 'onSelectionChange',
+    type: '(e: Event) => void',
+    required: false,
+    description: ' Callback function triggered when the text selection changes in the textarea. Useful for implementing features like mention autocomplete or context-sensitive tools that need to react to cursor position or text selection changes. ',
+  },
+  {
     name: 'placeholder',
     type: 'string',
     required: false,
@@ -108,6 +114,12 @@ const textareaProps: PropDefinition[] = [
     type: 'boolean',
     required: false,
     description: ' When true, displays error styling on the textarea. Typically changes border color to red and may add error-related visual cues. Usually used in combination with error messages to provide validation feedback. ',
+  },
+  {
+    name: 'ref',
+    type: 'React.Ref<HTMLTextAreaElement>',
+    required: false,
+    description: ' Ref object to access the underlying textarea DOM element. ',
   },
 ];
 
